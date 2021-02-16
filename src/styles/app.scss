@@ -12,14 +12,48 @@ $content-max-weight: 1240px;
 	outline-offset: 4px;
 }
 
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
 // https://github.com/WICG/focus-visible
 .js-focus-visible :focus:not(.focus-visible) {
 	outline: none;
 }
 
 body {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+body.dark {
+	// --color-main: #E94200;
+	// --color-dop: #727272;
+	--color-main-back: #313032;
+	--color-dop-back: #2d2b2e;
+	// --color-border: #E5E5E5;
+	--color-main-text: #ffffff;
+	// --color-dop-text: #BEBEBE;
+	// --color-cta: #80B918;
+	// --color-error: #EB001B;
+	// --color-alert: #FFDD2D;
+}
+
+body {
 	font-family: "MuseoSansCyrl", sans-serif;
 	font-weight: 500;
+	background-color: var(--color-main-back);
+	color: var(--color-main-text);
 }
 
 @import "./common/header.scss";
@@ -37,3 +71,7 @@ body {
 // @media screen and (max-width: 768px) {
 
 // }
+
+.udoli {
+	background-color: aqua;
+}
