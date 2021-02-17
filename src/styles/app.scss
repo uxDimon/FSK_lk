@@ -100,6 +100,7 @@ body {
 		color: var(--color-main-text);
 		box-sizing: border-box;
 		border-radius: 3px;
+		transition: box-shadow 150ms ease-in-out 0ms;
 
 		&::placeholder {
 			color: var(--color-dop-text);
@@ -221,6 +222,56 @@ body {
 
 	.tel-country__select-arrow {
 		transform: translateY(-50%) rotate(180deg);
+	}
+}
+
+// button
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 180px;
+	min-height: 50px;
+	border-radius: 5px;
+	padding: 10px 16px;
+	color: var(--color-main-back);
+	background-color: var(--color-main);
+	border: 1px solid var(--color-main);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	position: relative;
+	transition: box-shadow 150ms ease-in-out 0ms;
+	overflow: hidden;
+
+	&:hover {
+		box-shadow: 0px 0px 10px #fc4c02;
+	}
+	&:active {
+		box-shadow: none;
+	}
+
+	& > .buttonEffect {
+		position: absolute;
+		display: block;
+		width: 20px;
+		height: 20px;
+		border-radius: 100%;
+		background-color: rgba(255, 255, 255, 0.25);
+		animation: button-active 600ms ease-in-out forwards;
+		z-index: 1;
+	}
+}
+
+@keyframes button-active {
+	0% {
+		transform: scale(0);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(50);
+		opacity: 0;
 	}
 }
 
