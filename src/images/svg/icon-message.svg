@@ -1,0 +1,5 @@
+<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M18 1H2C1.44772 1 1 1.44772 1 2V13V16.7919C1 16.8758 1.09699 16.9224 1.16247 16.87L4.75 14H18C18.5523 14 19 13.5523 19 13V2C19 1.44772 18.5523 1 18 1Z"
+        stroke="var(--icon-color, #E94200)" stroke-width="1.2" />
+</svg>

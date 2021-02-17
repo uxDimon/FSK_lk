@@ -58,10 +58,17 @@ body.dark {
 	// --color-cta: #80B918;
 	// --color-error: #EB001B;
 	// --color-alert: #FFDD2D;
+
+	svg[data-logo] {
+		--icon-color-text: var(--color-main-text);
+	}
 }
 
 body {
+	margin: 0;
+	padding: 0;
 	font-family: $font-primary;
+	font-style: normal;
 	font-weight: 500;
 	background-color: var(--color-main-back);
 	color: var(--color-main-text);
@@ -83,8 +90,8 @@ body {
 
 	.input__error {
 		color: var(--color-error);
-		visibility: hidden;
 		margin-top: 4px;
+		display: none;
 	}
 
 	.input__input {
@@ -123,7 +130,22 @@ body {
 		}
 
 		> .input__error {
-			visibility: visible;
+			display: block;
+		}
+	}
+}
+
+body.dark {
+	.input__input {
+		--color-border: var(--color-dop);
+
+		&:hover {
+			border-color: var(--color-main);
+			box-shadow: none;
+		}
+
+		&::placeholder {
+			color: var(--color-dop);
 		}
 	}
 }
@@ -133,6 +155,7 @@ body {
 	.input__input {
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
+		border-right: none;
 	}
 
 	.input {
@@ -154,12 +177,15 @@ body {
 }
 
 .tel-country__select {
+	margin: 0;
+	padding: 0;
 	border-radius: 0 3px 3px 0;
 	background-color: var(--color-border);
+	border: 1px solid var(--color-border);
+	border-left: none;
 	display: block;
 	width: 100%;
 	height: 100%;
-	border: none;
 	cursor: pointer;
 	position: relative;
 	z-index: 2;
@@ -187,15 +213,17 @@ body {
 .tel-country__optipn-wrap {
 	position: absolute;
 	top: 100%;
-	left: 0;
 	right: 0;
+	padding: 11px 17px 8px;
 	display: grid;
 	align-content: center;
 	justify-content: center;
 	grid-gap: 10px;
+	margin-top: -3px;
 	border: 1px solid var(--color-border);
+	border-top: 3px;
 	background-color: var(--color-main-back);
-	border-radius: 3px;
+	border-radius: 0 0 3px 3px;
 	z-index: 1;
 
 	transform: translateY(-50px);
@@ -207,6 +235,16 @@ body {
 
 .tel-country__option {
 	cursor: pointer;
+}
+
+.tel-country__option-img {
+	border-radius: 20px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	object-fit: cover;
+	border: 1px solid var(--color-border);
+	box-sizing: content-box;
 }
 
 .tel-country__option-input {
@@ -225,6 +263,17 @@ body {
 	}
 }
 
+body.dark {
+	.tel-country__select {
+		background-color: var(--color-dop-back);
+		border-color: var(--color-dop);
+	}
+
+	.tel-country__optipn-wrap {
+		border-color: var(--color-dop);
+	}
+}
+
 // button
 .button {
 	display: flex;
@@ -234,9 +283,10 @@ body {
 	min-height: 50px;
 	border-radius: 5px;
 	padding: 10px 16px;
-	color: var(--color-main-back);
+	color: #ffffff;
 	background-color: var(--color-main);
-	border: 1px solid var(--color-main);
+	// border: 1px solid var(--color-main);
+	border: none;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 19px;
@@ -280,6 +330,7 @@ body {
 }
 @import "./common/header.scss";
 @import "./pages/index.scss";
+@import "./pages/login.scss";
 @import "./common/footer.scss";
 
 // @media screen and (max-width: 1274px) {

@@ -1,0 +1,102 @@
+.udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+
+.login-wrap {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: 16px;
+	background-image: url("../images/logIn-bac.jpg");
+	background-size: cover;
+	overflow-y: auto;
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-color: var(--color-main-back);
+		opacity: 0.7;
+		z-index: 1;
+	}
+}
+
+.login {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 600px;
+	padding: 60px 94px 94px;
+	background-color: var(--color-main-back);
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login__main-logo {
+	margin-bottom: 44px;
+}
+
+.login-form__h {
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 36px;
+	margin: 0 0 44px;
+}
+
+.login-form {
+	display: grid;
+	row-gap: 30px;
+	width: 100%;
+}
+
+.login-form__bottom-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.login-form__bottom-resend {
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	border: none;
+	color: var(--color-main-text);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+
+	> svg {
+		margin-right: 10px;
+	}
+
+	&:disabled {
+		color: var(--color-border);
+		cursor: default;
+
+		> svg {
+			--icon-color: var(--color-border);
+		}
+	}
+}
