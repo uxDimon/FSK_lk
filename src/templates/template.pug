@@ -19,14 +19,12 @@ html
 		
 	//- body
 	body.dark
-		include components/header.pug
+		if header
+			include components/header.pug
 
 		block content
 
-		//- if contactForm
-			include components/contact.pug
-
-		include components/footer.pug
+		//- include components/footer.pug
 
 		//- https://imask.js.org
 		script(src="assets/scripts/imask.min.js")
