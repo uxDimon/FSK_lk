@@ -51,9 +51,9 @@ body {
 body.dark {
 	// --color-main: #E94200;
 	// --color-dop: #727272;
-	--color-main-back: #313032;
+	--color-main-back: #202021;
 	--color-dop-back: #2d2b2e;
-	// --color-border: #E5E5E5;
+	--color-border: #727272;
 	--color-main-text: #ffffff;
 	// --color-dop-text: #BEBEBE;
 	// --color-cta: #80B918;
@@ -166,17 +166,8 @@ body {
 }
 
 body.dark {
-	.input__input {
-		--color-border: var(--color-dop);
-
-		&:hover {
-			border-color: var(--color-main);
-			box-shadow: none;
-		}
-
-		&::placeholder {
-			color: var(--color-dop);
-		}
+	.input__input::placeholder {
+		color: var(--color-dop);
 	}
 }
 
@@ -296,17 +287,12 @@ body.dark {
 body.dark {
 	.tel-country__select {
 		background-color: var(--color-dop-back);
-		border-color: var(--color-dop);
-	}
-
-	.tel-country__optipn-wrap {
-		border-color: var(--color-dop);
 	}
 }
 
 // button
 .button {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	min-width: 180px;
@@ -315,12 +301,13 @@ body.dark {
 	padding: 10px 16px;
 	color: #ffffff;
 	background-color: var(--color-main);
-	// border: 1px solid var(--color-main);
+	border: 1px solid var(--color-main);
 	border: none;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 19px;
 	text-align: center;
+	text-decoration: none;
 	position: relative;
 	transition: box-shadow 150ms ease-in-out 0ms;
 	overflow: hidden;
@@ -355,6 +342,30 @@ body.dark {
 	}
 }
 
+.button_icon {
+	min-width: 200px;
+	min-height: 50px;
+	border-radius: 3px;
+	border: 1px solid var(--color-border);
+	background-color: transparent;
+	color: var(--color-main-text);
+	transition: 150ms ease-in-out 0ms;
+	transition-property: box-shadow, border-color;
+
+	&:hover {
+		box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+		border-color: transparent;
+	}
+}
+
+body.dark {
+	.button_icon:hover {
+		box-shadow: none;
+		border-color: var(--color-main);
+	}
+}
+
+// .udoli ↓
 .udoli {
 	background-color: aqua;
 }
