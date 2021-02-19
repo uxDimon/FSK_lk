@@ -53,3 +53,22 @@ if (buttonActiveList) {
 		});
 	}
 }
+
+// Слайдер
+// https://swiperjs.com/swiper-api
+const mainSliderList = document.querySelectorAll(".main-slider");
+if (mainSliderList) {
+	for (const mainSlider of mainSliderList) {
+		var swiper = new Swiper(mainSlider, {
+			effect: "fade",
+			loop: true,
+			pagination: {
+				el: ".main-slider__pagination",
+			},
+			navigation: {
+				nextEl: ".main-slider__button-next",
+				prevEl: ".main-slider__button-prev",
+			},
+		});
+	}
+}

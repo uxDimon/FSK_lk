@@ -1,4 +1,4 @@
-.udoli {
+@mixin udoli {
 	--color-main: #e94200;
 	--color-dop: #727272;
 	--color-main-back: #ffffff;
@@ -10,6 +10,9 @@
 	--color-error: #eb001b;
 	--color-alert: #ffdd2d;
 }
+$content-max-weight: 1200px;
+$content-padding: 0 16px;
+// Fix: Слышь удоли ↑
 
 .login-wrap {
 	position: relative;

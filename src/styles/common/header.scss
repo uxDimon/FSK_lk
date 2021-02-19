@@ -1,4 +1,4 @@
-.udoli {
+@mixin udoli {
 	--color-main: #e94200;
 	--color-dop: #727272;
 	--color-main-back: #ffffff;
@@ -12,6 +12,7 @@
 }
 $content-max-weight: 1200px;
 $content-padding: 0 16px;
+// Fix: Слышь удоли ↑
 
 .header__wrap {
 	background-color: var(--color-main-back);
