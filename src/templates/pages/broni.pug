@@ -1,0 +1,104 @@
+extends ../template
+
+block variables
+    - var title = 'Мои брони и сделки'
+    - var header = true
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Мои брони и сделки
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Главная
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Личный кабинет
+                    li.bread-cru__item 
+                        .bread-cru__linc Мои брони и сделк
+
+        .cont-block__wrap 
+            .cont-block
+                .bron-card
+                    .bron-card-nav
+                        button.bron-card-nav__button-tab
+                            span Планировка
+                        button.bron-card-nav__button-tab
+                            span На этаже
+                        button.bron-card-nav__button-tab
+                            span Схема корпусов
+                        button.bron-card-nav__button-tab
+                            span Отделка
+                        a(href="#", title="Информация").bron-card-nav__info
+                            svg(width="26", height="27")
+                                use(xlink:href="./assets/images/sprite.svg#icon-info")
+                    
+                    .bron-card-body
+                        .bron-card-body__button-zoom.button-zoom
+                            svg(width="18", height="14")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow-two")
+                        .bron-card-body__img-wrap
+                            img(src="./assets/images/bron-card1.png", alt="Планировка").bron-card-body__img
+                            img(src="./assets/images/bron-card2.png", alt="На этаже", style="display: none;").bron-card-body__img
+                            img(src="./assets/images/bron-card3.png", alt="Схема корпусов", style="display: none;").bron-card-body__img
+                            img(src="./assets/images/bron-card4.png", alt="Отделка", style="display: none;").bron-card-body__img
+                        .bron-card-body__back    
+                            svg(width="223", height="50").bron-card-body__back-img
+                                use(xlink:href="./assets/images/sprite.svg#main-logo")
+
+                    .bron-card-info
+                        .bron-card-info__linc-wrap 
+                            a(href="#", title="Поделится").bron-card-info__linc
+                                svg(width="20", height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-share")
+                            a(href="#", title="Скачать").bron-card-info__linc
+                                svg(width="20", height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-download")
+                            a(href="#", title="Распечатать").bron-card-info__linc
+                                svg(width="20", height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-print")
+
+                        h3.bron-card-info__h 3-к квартира (№ 752), 42 м²
+
+                        .bron-card-info__options-wrap
+                            ul.bron-card-info__options-list
+                                li.bron-card-info__options-item 
+                                    span Проект
+                                    span UP-квартал Пушкинский
+                                li.bron-card-info__options-item 
+                                    span Корпус / секция
+                                    span 6.1 / 2
+                                li.bron-card-info__options-item 
+                                    span Общая площадь
+                                    span 27 м2
+                                li.bron-card-info__options-item 
+                                    span Жилая площадь
+                                    span 16 м2
+                                li.bron-card-info__options-item 
+                                    span Площадь кухни
+                                    span 5 м2
+                                li.bron-card-info__options-item 
+                                    span Этаж / этажей
+                                    span 21 / 26
+                                li.bron-card-info__options-item 
+                                    span Отделка
+                                    span Предчистовая
+                            
+                            ul.bron-card-info__options-list
+                                li.bron-card-info__options-item 
+                                    span Оплата брони
+                                    span
+                                        svg(width="20", height="20").bron-card-info__options-item-ok
+                                            use(xlink:href="./assets/images/sprite.svg#icon-print")
+                                        span 20 000
+                                li.bron-card-info__options-item 
+                                    span Дата брони
+                                    span 22.05.2020
+                                li.bron-card-info__options-item 
+                                    span Резерв до
+                                    span 27.05.2020
+                        
+                        .bron-card-info__prise-wrap 
+                            .bron-card-info__prise Цена по акции: 10 825 430 р.
+                            .bron-card-info__prise-old Базовая цена: 12 230 120 р.
+                            .bron-card-info__prise-old ID квартиры: 45 702

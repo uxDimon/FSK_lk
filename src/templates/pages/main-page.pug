@@ -1,7 +1,7 @@
 extends ../template
 
 block variables
-    - var title = 'Войти'
+    - var title = 'Добро пожаловать в личный кабинет покупателя ГК ФСК'
     - var header = true
 
 block content
@@ -36,10 +36,10 @@ block content
                             img(src="./assets/images/slider2.jpg", alt="Добро пожаловать в личный кабинет покупателя ГК ФСК").main-slider__img
 
                     .main-slider__button-wrap
-                        .main-slider__button-next
+                        .main-slider__button-next.button-next
                             svg(width="18", height="14")
                                 use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")
-                        .main-slider__button-prev
+                        .main-slider__button-prev.button-prev
                             svg(width="18", height="14")
                                 use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")
                     .main-slider__pagination

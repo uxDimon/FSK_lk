@@ -1,0 +1,77 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+$content-max-weight: 1200px;
+$content-padding: 0 16px;
+// Fix: Слышь удоли ↑
+
+.bron-card {
+	width: 100%;
+	min-height: 550px;
+	border: 1px solid var(--color-border);
+	border-radius: 5px;
+	background-color: var(--color-main-back);
+	display: grid;
+	grid-template-columns: 60px 1fr auto;
+	justify-items: stretch;
+}
+
+.bron-card-nav {
+	display: grid;
+	grid-row-gap: 24px;
+	grid-template-rows: repeat(4, auto) 1fr;
+	align-content: start;
+	justify-items: center;
+	padding: 24px 4px;
+	background-color: var(--color-dop-back);
+	border-radius: 4px 0px 0px 4px;
+}
+
+.bron-card-nav__button-tab {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--color-dop-text);
+	width: 100%;
+
+	> span {
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
+	}
+
+	&:active {
+		color: var(--color-main-text);
+	}
+}
+
+.bron-card-nav__info {
+	display: block;
+	align-self: end;
+}
+
+.bron-card-body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.bron-card-body__button-zoom {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	background-color: var(--color-border);
+}

@@ -75,6 +75,10 @@ body {
 	color: var(--color-main-text);
 }
 
+a {
+	transition: color 100ms ease-in-out 0ms;
+}
+
 .cont-block__wrap {
 	display: flex;
 	flex-direction: column;
@@ -95,12 +99,52 @@ body {
 	margin: 70px 0;
 }
 
+.cont-block__h1 {
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 36px;
+	color: var(--color-main-text);
+	margin: 0 0 4px;
+}
+
 .cont-block__h {
 	font-weight: 500;
 	font-size: 30px;
 	line-height: 36px;
 	color: var(--color-main-text);
 	margin: 0 0 24px;
+}
+
+// bread-cru
+.bread-cru__item {
+	display: inline-flex;
+	align-items: center;
+
+	&::after {
+		content: "";
+		width: 4px;
+		height: 4px;
+		border-radius: 4px;
+		background-color: var(--color-dop-text);
+		margin: 0 10px;
+	}
+
+	&:last-child::after {
+		content: none;
+	}
+}
+
+.bread-cru__linc {
+	display: inline;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 19px;
+	color: var(--color-dop-text);
+	text-decoration: none;
+}
+
+a.bread-cru__linc:hover {
+	color: var(--color-main-text);
 }
 
 // input
@@ -365,6 +409,45 @@ body.dark {
 	}
 }
 
+.button-next,
+.button-prev,
+.button-zoom {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background-color: var(--color-main-back);
+	opacity: 0.8;
+	cursor: pointer;
+	transition: opacity 150ms ease-in-out 0ms;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+}
+
+.button-next {
+	transform: rotate(-180deg);
+}
+
+body.dark {
+	.button-next,
+	.button-prev,
+	.button-zoom {
+		svg {
+			--icon-color: var(--color-main-text);
+		}
+	}
+}
+
 // .udoli ↓
 .udoli {
 	background-color: aqua;
@@ -373,6 +456,7 @@ body.dark {
 @import "./pages/index.scss";
 @import "./pages/login.scss";
 @import "./pages/main-page.scss";
+@import "./pages/broni.scss";
 @import "./common/footer.scss";
 
 // @media screen and (max-width: 1274px) {
