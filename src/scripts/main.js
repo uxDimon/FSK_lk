@@ -109,3 +109,18 @@ if (tabIdList) {
 		}
 	}
 }
+
+// bron-progres
+const bronProgresList = document.querySelectorAll(".bron-progres");
+if (bronProgresList) {
+	for (const bronProgres of bronProgresList) {
+		bronProgres.querySelector(".bron-progres__button").addEventListener("click", () => {
+			bronProgres.classList.toggle(activeClass);
+			if (bronProgres.classList.contains(activeClass)) {
+				bronProgres.style.height = bronProgres.scrollHeight + "px";
+			} else {
+				bronProgres.style.height = "";
+			}
+		});
+	}
+}

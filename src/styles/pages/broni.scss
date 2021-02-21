@@ -133,6 +133,7 @@ $content-padding: 0 16px;
 
 	> svg {
 		display: block;
+		--icon-color: var(--color-dop-text);
 	}
 
 	&:hover > svg {
@@ -215,4 +216,196 @@ $content-padding: 0 16px;
 
 .bron-card-info__prise-old {
 	color: var(--color-dop-text);
+}
+
+.bron-progres-linc,
+.bron-progres {
+	background-color: var(--color-dop-back);
+	border-radius: 3px;
+	padding: 26px 30px;
+	margin: 30px 0 70px;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-column-gap: 30px;
+}
+
+.bron-progres-linc__h {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 21px;
+	color: var(--color-main);
+	margin-bottom: 6px;
+}
+
+.bron-progres-linc__text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--color-main-text);
+}
+
+.bron-progres-linc__linc {
+	display: block;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	border: 2px solid var(--color-main);
+	align-self: center;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		--icon-color: var(--color-main-text);
+	}
+}
+
+.bron-progres {
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+	transition: height 300ms ease-in-out 0ms;
+}
+
+.bron-progres__body {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 30px;
+	margin: -24px 0;
+}
+
+.bron-progres__item {
+	position: relative;
+	padding: 24px 0 24px 36px;
+	opacity: 0;
+	transition: 200ms ease-in-out 0ms;
+	transition-property: opacity;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 9px;
+		height: 9px;
+		border-radius: 20px;
+		border: 2px solid var(--color-dop-back);
+		background-color: var(--color-border);
+		left: -2px;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 1px;
+		top: 0;
+		bottom: 0;
+		left: 4px;
+		background-color: var(--color-border);
+	}
+
+	&:first-child::after {
+		top: 50%;
+	}
+	&:last-child::after {
+		bottom: 50%;
+	}
+
+	&.bron-progres__item_green::before {
+		background-color: var(--color-cta);
+	}
+
+	&.bron-progres__item_orange::before {
+		background-color: var(--color-main);
+	}
+
+	&.active {
+		opacity: 1;
+		position: absolute;
+		top: 50%;
+		left: 30px;
+		transform: translateY(-50%);
+
+		&::after {
+			top: 10px;
+			bottom: 10px;
+		}
+	}
+}
+
+.bron-progres__item-h,
+.bron-progres__item-text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+	color: var(--color-main-text);
+}
+
+.bron-progres__item-h {
+	font-weight: 700;
+}
+
+.bron-progres__item.bron-progres__item_green {
+	.bron-progres__item-h,
+	.bron-progres__item-text {
+		color: var(--color-dop-text);
+	}
+}
+
+.bron-progres__item.bron-progres__item_orange .bron-progres__item-h {
+	color: var(--color-main);
+}
+
+.bron-progres__button {
+	display: block;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	border: 2px solid var(--color-main);
+	align-self: start;
+	margin-top: 5px;
+	cursor: pointer;
+	background-color: transparent;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(90deg);
+		--icon-color: var(--color-main-text);
+		transition: transform 300ms ease-in-out 0ms;
+	}
+}
+
+.bron-progres.active {
+	.bron-progres__item {
+		opacity: 1;
+
+		&.active {
+			position: relative;
+			top: 0;
+			left: 0;
+			transform: none;
+
+			&::after {
+				top: 0;
+				bottom: 0;
+			}
+
+			&:first-child::after {
+				top: 50%;
+			}
+			&:last-child::after {
+				bottom: 50%;
+			}
+		}
+	}
+
+	.bron-progres__button svg {
+		transform: translate(-50%, -50%) rotate(-90deg);
+	}
 }
