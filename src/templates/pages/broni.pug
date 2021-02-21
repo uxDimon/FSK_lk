@@ -21,13 +21,13 @@ block content
             .cont-block
                 .bron-card
                     .bron-card-nav
-                        button.bron-card-nav__button-tab
+                        button(data-tab-id="card1", data-tab-control="1").bron-card-nav__button-tab.active
                             span Планировка
-                        button.bron-card-nav__button-tab
+                        button(data-tab-id="card1", data-tab-control="2").bron-card-nav__button-tab
                             span На этаже
-                        button.bron-card-nav__button-tab
+                        button(data-tab-id="card1", data-tab-control="3").bron-card-nav__button-tab
                             span Схема корпусов
-                        button.bron-card-nav__button-tab
+                        button(data-tab-id="card1", data-tab-control="4").bron-card-nav__button-tab
                             span Отделка
                         a(href="#", title="Информация").bron-card-nav__info
                             svg(width="26", height="27")
@@ -37,14 +37,14 @@ block content
                         .bron-card-body__button-zoom.button-zoom
                             svg(width="18", height="14")
                                 use(xlink:href="./assets/images/sprite.svg#icon-arrow-two")
-                        .bron-card-body__img-wrap
-                            img(src="./assets/images/bron-card1.png", alt="Планировка").bron-card-body__img
-                            img(src="./assets/images/bron-card2.png", alt="На этаже", style="display: none;").bron-card-body__img
-                            img(src="./assets/images/bron-card3.png", alt="Схема корпусов", style="display: none;").bron-card-body__img
-                            img(src="./assets/images/bron-card4.png", alt="Отделка", style="display: none;").bron-card-body__img
                         .bron-card-body__back    
                             svg(width="223", height="50").bron-card-body__back-img
                                 use(xlink:href="./assets/images/sprite.svg#main-logo")
+                        .bron-card-body__img-wrap
+                            img(data-tab-id="card1", data-tab-block="1", data-zoomable, src="./assets/images/bron-card1.png", alt="Планировка").bron-card-body__img
+                            img(data-tab-id="card1", data-tab-block="2", data-zoomable, src="./assets/images/bron-card2.png", alt="На этаже", style="display: none;").bron-card-body__img
+                            img(data-tab-id="card1", data-tab-block="3", data-zoomable, src="./assets/images/bron-card3.png", alt="Схема корпусов", style="display: none;").bron-card-body__img
+                            img(data-tab-id="card1", data-tab-block="4", data-zoomable, src="./assets/images/bron-card4.png", alt="Отделка", style="display: none;").bron-card-body__img
 
                     .bron-card-info
                         .bron-card-info__linc-wrap 
@@ -88,8 +88,9 @@ block content
                                 li.bron-card-info__options-item 
                                     span Оплата брони
                                     span
-                                        svg(width="20", height="20").bron-card-info__options-item-ok
-                                            use(xlink:href="./assets/images/sprite.svg#icon-print")
+                                        .bron-card-info__options-item-ok
+                                            svg(width="14", height="14")
+                                                use(xlink:href="./assets/images/sprite.svg#icon-ок")
                                         span 20 000
                                 li.bron-card-info__options-item 
                                     span Дата брони

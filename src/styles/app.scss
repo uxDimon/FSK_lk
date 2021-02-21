@@ -115,6 +115,14 @@ a {
 	margin: 0 0 24px;
 }
 
+// medium-zoom
+.medium-zoom-overlay {
+	z-index: 1000;
+}
+.medium-zoom-image--opened {
+	z-index: 1001;
+}
+
 // bread-cru
 .bread-cru__item {
 	display: inline-flex;
