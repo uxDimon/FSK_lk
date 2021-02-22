@@ -1,0 +1,220 @@
+extends ../template
+
+block variables
+    - var title = 'Мои данные'
+    - var header = true
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Мои данные
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Главная
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Личный кабинет
+                    li.bread-cru__item 
+                        .bread-cru__linc Мои данные
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .data-header 
+                    .data-header__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-passport")
+                    h2.data-header__h Общая информация
+                
+                .data-input-block 
+                    lable.input
+                        .input__name Фамилия 
+                        input(type="text", name="", placeholder="Фамилия", value="Иванов", disabled).input__input
+                        .input__error Поле указано не верно                   
+                    lable.input
+                        .input__name Имя 
+                        input(type="text", name="", placeholder="Имя", value="Александр", disabled).input__input
+                        .input__error Поле указано не верно                   
+                    lable.input
+                        .input__name Отчество 
+                        input(type="text", name="", placeholder="Отчество", value="Иванович", disabled).input__input
+                        .input__error Поле указано не верно        
+                    
+                    lable.input
+                        .input__name Дата рождения 
+                        input(type="date", name="", placeholder="Дата рождения", value="1992-05-25", disabled).input__input
+                        .input__error Поле указано не верно                   
+                    lable.input
+                        .input__name Гражданство 
+                        input(type="text", name="", placeholder="Гражданство", value="Российская федерация", disabled).input__input
+                        .input__error Поле указано не верно                   
+                    lable.input
+                        .input__name Телефон 
+                        input(type="tel", name="", placeholder="+7 (999) 123-45-67", value="9991234567", disabled).input__input
+                        .input__error Поле указано не верно        
+
+                    lable.input
+                        .input__name E-mail 
+                        input(type="email", name="", placeholder="username@mail.ru", value="username@mail.ru").input__input
+                        .input__error Поле указано не верно                   
+                    lable.input
+                        .input__name Доп. телефон 
+                        input(type="tel", name="", placeholder="+7 (999) 123-45-67", value="9991234567").input__input
+                        .input__error Поле указано не верно        
+                    lable.input
+                        .input__name Доп. e-mail 
+                        input(type="email", name="", placeholder="username@mail.ru", value="").input__input
+                        .input__error Поле указано не верно                   
+                
+                .data-input-text
+                    p Если у вас изменились ФИО, гражданство или номер телефона, то для их изменения вам необходимо отправить письменное обращение на официальном бланке (можно скачать в разделе “Помощь и документы”) и направить его скан специалистам службы клиентского сервиса через раздел “Заявки и обращения” или на почту oks@fsknw.ru.
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .data-header 
+                    .data-header__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-cat")
+                    h2.data-header__h Личная информация
+                
+                .data-checkbox-block 
+                    //- label.input-check
+                        input(type="checkbox", name="").input-check__input
+                        .input-check__mimic
+                            svg(width="40", height="40")
+                                use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                        .input-check__text Да
+                    //- label.input-switch
+                        input(type="checkbox", name="").input-switch__input
+                        .input-switch__mimic
+                    .input-radio-wrap
+                        .input-radio-wrap__trxt Вы состоите в браке? 
+                        .input-radio-wrap__input
+                            label.input-check
+                                input(type="radio", name="radio1", checked).input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Да
+                            label.input-check
+                                input(type="radio", name="radio1").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Нет
+                    .input-radio-wrap
+                        .input-radio-wrap__trxt У вас есть автомобиль?
+                        .input-radio-wrap__input
+                            label.input-check
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Да
+                            label.input-check
+                                input(type="radio", name="radio2", checked).input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Нет
+                    .input-radio-wrap
+                        .input-radio-wrap__trxt У вас есть домашние животные? 
+                        .input-radio-wrap__input
+                            label.input-check
+                                input(type="radio", name="radio3").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Да
+                            label.input-check
+                                input(type="radio", name="radio3").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Нет
+                    
+                    .input-radio-wrap
+                        .input-radio-wrap__trxt У вас есть дети?
+                        .input-radio-wrap__input
+                            label.input-check
+                                input(type="radio", name="radio4").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Да
+                            label.input-check
+                                input(type="radio", name="radio4").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Нет
+                    .input-radio-wrap
+                        .input-radio-wrap__trxt Вы готовы разделять мусор?
+                        .input-radio-wrap__input
+                            label.input-check
+                                input(type="radio", name="radio5").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Да
+                            label.input-check
+                                input(type="radio", name="radio5").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Нет
+                    .input-radio-wrap
+                        .input-radio-wrap__trxt Вы готовы разделять мусор? 
+                        .input-radio-wrap__input
+                            label.input-check
+                                input(type="radio", name="radio6").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Да
+                            label.input-check
+                                input(type="radio", name="radio6").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Нет
+                
+                .data-input-text
+                    p Данная информация может использоваться службой клиентсткого сервиса с целью целевого информирования, и НЕ предназначена для передачи третьим лицам, в том числе другим дольщиков.
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .data-header 
+                    .data-header__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-bell")
+                    h2.data-header__h Управление уведомлениями
+                
+                ul.data-switch-block
+                    li.data-switch-block__item
+                        .data-switch-block__text Информационные рассылки
+                        label.input-switch
+                            input(type="checkbox", name="").input-switch__input
+                            .input-switch__mimic
+                    li.data-switch-block__item
+                        .data-switch-block__text Предложения от партнеров
+                        label.input-switch
+                            input(type="checkbox", name="", checked).input-switch__input
+                            .input-switch__mimic
+                    li.data-switch-block__item
+                        .data-switch-block__text Отчеты о ходе строительства
+                        label.input-switch
+                            input(type="checkbox", name="", checked).input-switch__input
+                            .input-switch__mimic
+                    li.data-switch-block__item
+                        .data-switch-block__text Ответы на форуме
+                        label.input-switch
+                            input(type="checkbox", name="",).input-switch__input
+                            .input-switch__mimic
+                    li.data-switch-block__item
+                        .data-switch-block__text Персональные предложения
+                        label.input-switch
+                            input(type="checkbox", name="").input-switch__input
+                            .input-switch__mimic
+                
+                .data-button-wrap
+                    button(type="submit").button Сохранить изменения

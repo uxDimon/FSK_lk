@@ -1,3 +1,10 @@
+const switchDark = document.querySelector("#switch-dark");
+if (switchDark) {
+	switchDark.addEventListener("change", () => {
+		document.body.classList.toggle("dark");
+	});
+}
+
 const activeClass = "active";
 
 // https://imask.js.org/guide.html
@@ -36,6 +43,14 @@ if (telCountryList) {
 				wrap.classList.toggle(activeClass);
 			});
 		}
+	}
+}
+
+// Маски для телефона
+const telInputList = document.querySelectorAll('.input > input[type="tel"]');
+if (telInputList) {
+	for (const telInput of telInputList) {
+		let telMask = IMask(telInput, maskTel.rus);
 	}
 }
 

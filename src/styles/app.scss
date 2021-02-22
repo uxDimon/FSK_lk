@@ -89,6 +89,10 @@ a {
 .cont-block {
 	width: 100%;
 	max-width: $content-max-weight;
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .cont-block_m30 {
@@ -97,6 +101,10 @@ a {
 
 .cont-block_m70 {
 	margin: 70px 0;
+}
+
+.cont-block_mb70 {
+	margin: 0 0 70px 0;
 }
 
 .cont-block__h1 {
@@ -201,8 +209,21 @@ a.bread-cru__linc:hover {
 		}
 
 		&:focus {
-			border-color: var(--color-main-text);
+			border-color: var(--color-main);
 			outline: none;
+		}
+
+		&:disabled {
+			color: var(--color-dop);
+			background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0009 8.00075L12.0011 6.00056C13.1058 4.89589 13.1058 3.10486 12.0011 2.00019C10.8964 0.895516 9.10541 0.895516 8.00074 2.00019L6.00055 4.00037M8.00074 10.0009L6.00055 12.0011C4.89588 13.1058 3.10485 13.1058 2.00018 12.0011C0.895509 10.8964 0.895509 9.10542 2.00018 8.00075L4.00037 6.00056M9.50088 4.50042L4.50041 9.50089' stroke='%23727272' stroke-width='1.2'/%3E%3C/svg%3E"); // background-image: url("../images/sprite.svg#icon-lock");
+			background-size: 15px;
+			background-repeat: no-repeat;
+			background-position: calc(100% - 14px) center;
+
+			&:hover {
+				border-color: var(--color-border);
+				box-shadow: none;
+			}
 		}
 	}
 
@@ -218,8 +239,140 @@ a.bread-cru__linc:hover {
 }
 
 body.dark {
-	.input__input::placeholder {
-		color: var(--color-dop);
+	.input__input {
+		&:hover {
+			border-color: var(--color-main);
+			box-shadow: none;
+		}
+
+		&::placeholder {
+			color: var(--color-dop);
+		}
+	}
+}
+
+// input-check
+.input-check {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.input-check__mimic {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border: 1px solid var(--color-border);
+	background-color: var(--color-main-back);
+	border-radius: 3px;
+	transition: 100ms ease-in-out 0ms;
+	transition-property: box-shadow, border-color;
+
+	svg {
+		--icon-color: var(--color-main);
+		--icon-stroke: 0.5;
+		transition: opacity 150ms ease-in-out 0ms;
+		opacity: 0;
+		display: block;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.input-check__input {
+	position: absolute;
+	opacity: 0;
+
+	&:hover ~ .input-check__mimic {
+		border-color: var(--color-main-back);
+		box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+	}
+
+	&.focus-visible ~ .input-check__mimic {
+		border-color: var(--color-main);
+		outline: none;
+	}
+
+	&:checked ~ .input-check__mimic svg {
+		opacity: 1;
+	}
+}
+
+.input-check__text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--color-main-text);
+	margin-left: 14px;
+}
+
+body.dark {
+	.input-check__input:hover ~ .input-check__mimic {
+		border-color: var(--color-main);
+		box-shadow: none;
+	}
+}
+
+// input-radio-wrap
+.input-radio-wrap__trxt {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--color-dop);
+	margin-bottom: 6px;
+}
+
+.input-radio-wrap__input {
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-column-gap: 24px;
+	grid-auto-flow: column;
+}
+
+// input-switch
+.input-switch {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+.input-switch__mimic {
+	position: relative;
+	width: 36px;
+	height: 20px;
+	border-radius: 20px;
+	background-color: var(--color-dop-text);
+	transition: background-color 150ms ease-in-out 0ms;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 16px;
+		height: 16px;
+		border-radius: 16px;
+		background-color: #fff;
+		transition: left 150ms ease-in-out 0ms;
+	}
+}
+
+.input-switch__input {
+	position: absolute;
+	opacity: 0;
+
+	&:checked ~ .input-switch__mimic {
+		background-color: var(--color-main);
+
+		&::before {
+			left: 18px;
+		}
 	}
 }
 
@@ -363,6 +516,7 @@ body.dark {
 	position: relative;
 	transition: box-shadow 150ms ease-in-out 0ms;
 	overflow: hidden;
+	cursor: pointer;
 
 	&:hover {
 		box-shadow: 0px 0px 10px #fc4c02;
@@ -465,6 +619,7 @@ body.dark {
 @import "./pages/login.scss";
 @import "./pages/main-page.scss";
 @import "./pages/broni.scss";
+@import "./pages/my-data.scss";
 @import "./common/footer.scss";
 
 // @media screen and (max-width: 1274px) {

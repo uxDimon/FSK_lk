@@ -16,7 +16,7 @@ block content
                 .login-form
                     lable.input.input_tel-country
                         .tel-country__wrap
-                            input(type="tel", name="login-form", placeholder="Александр").input__input
+                            input(type="tel", name="login-form").input__input
                             .tel-country
                                 button(data-country="rus").tel-country__select
                                     svg(width="10", height="5").tel-country__select-arrow
@@ -29,15 +29,15 @@ block content
                                     label.tel-country__option
                                         input(type="radio", name="tel-country", value="aze").tel-country__option-input
                                         img(src="./assets/images/flag/flag-aze.svg", alt="Азербайджан").tel-country__option-img
-                        .input__error Фамилия указана неверно
+                        .input__error Поле указано не верно
                     
                     lable.input
-                        input(type="password", name="login-form", placeholder="Александр").input__input
-                        .input__error Фамилия указана неверно
+                        input(type="password", name="login-form").input__input
+                        .input__error Поле указано не верно
                     //- lable.input.error
                         .input__name Телефон 
                         input(type="text", name="login-form", placeholder="Александр").input__input
-                        .input__error Фамилия указана неверно
+                        .input__error Поле указано не верно
                     
                     .login-form__bottom-wrap
                         button(disabled).login-form__bottom-resend
