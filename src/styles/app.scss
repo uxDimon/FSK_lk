@@ -76,7 +76,12 @@ body {
 }
 
 a {
+	color: var(--color-main-text);
 	transition: color 100ms ease-in-out 0ms;
+
+	&:hover {
+		color: var(--color-main);
+	}
 }
 
 .cont-block__wrap {
@@ -219,12 +224,22 @@ a.bread-cru__linc:hover {
 			background-size: 15px;
 			background-repeat: no-repeat;
 			background-position: calc(100% - 14px) center;
+			padding-right: 34px;
 
 			&:hover {
 				border-color: var(--color-border);
 				box-shadow: none;
 			}
 		}
+	}
+
+	select.input__input {
+		cursor: pointer;
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 4.15789L9 1' stroke='%23E94200' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+		background-size: 10px;
+		background-repeat: no-repeat;
+		background-position: calc(100% - 14px) center;
+		padding-right: 34px;
 	}
 
 	&.error {

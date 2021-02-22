@@ -1,0 +1,197 @@
+extends ../template
+
+block variables
+    - var title = 'Помощь и документы'
+    - var header = true
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Помощь и документы
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Главная
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Личный кабинет
+                    li.bread-cru__item 
+                        .bread-cru__linc Помощь и документы
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .data-header 
+                    .data-header__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-wat-cloud")
+                    h2.data-header__h Ответы на частые вопросы
+                
+                .help-faq
+                    .help-faq-item
+                        .help-faq-item__head Что делать если у меня есть кот?
+                            .help-faq-item__button 
+                                svg(width="10", height="5")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")                        
+                        .help-faq-item__body
+                            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id aliquid laudantium odio hic, consequatur nesciunt quidem quaerat incidunt, nemo earum dolore explicabo ab consectetur voluptatem assumenda. Tenetur asperiores dolores impedit?
+                    
+                    .help-faq-item
+                        .help-faq-item__head Может ли подписать акт приемки мой родственник?
+                            .help-faq-item__button 
+                                svg(width="10", height="5")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")                       
+                        .help-faq-item__body
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id aliquid laudantium odio hic, consequatur nesciunt quidem quaerat incidunt, nemo earum dolore explicabo ab consectetur voluptatem assumenda. Tenetur asperiores dolores impedit?
+
+                    .help-faq-item
+                        .help-faq-item__head Входит ли в благоустройство территории аквадискотека?
+                            .help-faq-item__button 
+                                svg(width="10", height="5")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")                       
+                        .help-faq-item__body
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id aliquid laudantium odio hic, consequatur nesciunt quidem quaerat incidunt, nemo earum dolore explicabo ab consectetur voluptatem assumenda. Tenetur asperiores dolores impedit?
+
+                    .help-faq-item
+                        .help-faq-item__head Я потерял договор ДДУ. Что делать?
+                            .help-faq-item__button 
+                                svg(width="10", height="5")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")                       
+                        .help-faq-item__body
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id aliquid laudantium odio hic, consequatur nesciunt quidem quaerat incidunt, nemo earum dolore explicabo ab consectetur voluptatem assumenda. Tenetur asperiores dolores impedit?
+
+                    .help-faq-item
+                        .help-faq-item__head Можно ли оформить прописку в кладовке?
+                            .help-faq-item__button 
+                                svg(width="10", height="5")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")                       
+                        .help-faq-item__body
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id aliquid laudantium odio hic, consequatur nesciunt quidem quaerat incidunt, nemo earum dolore explicabo ab consectetur voluptatem assumenda. Tenetur asperiores dolores impedit?
+
+                    .help-faq-item
+                        .help-faq-item__head Сколько времени занимает процедура приемки квартиры?
+                            .help-faq-item__button 
+                                svg(width="10", height="5")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")                       
+                        .help-faq-item__body
+                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id aliquid laudantium odio hic, consequatur nesciunt quidem quaerat incidunt, nemo earum dolore explicabo ab consectetur voluptatem assumenda. Tenetur asperiores dolores impedit?
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .data-header 
+                    .data-header__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-doc")
+                    h2.data-header__h Шаблоны общих документов
+
+                .download-list
+                    .download-list__input-wrap 
+                        lable.input
+                            //- .input__name Телефон 
+                            select(name="").input__input
+                                option(value="1" ) UP-квартал “Московский”
+                                option(value="2") UP-квартал “Московский”1
+                                option(value="3") UP-квартал “Московский”2
+                            //- .input__error Поле указано не верно
+
+                    ul.download-list__list 
+                        li.download-list__item 
+                            .download-list__text Шаблон заявления
+                            a(href="#").linc-arrow Скачать
+                                .linc-arrow__icon.linc-arrow__icon_down
+                                    svg(width="18", height="14")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")                                
+                        li.download-list__item 
+                            .download-list__text Бланк вопросов
+                            a(href="#").linc-arrow Скачать
+                                .linc-arrow__icon.linc-arrow__icon_down
+                                    svg(width="18", height="14")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")                                
+                        li.download-list__item 
+                            .download-list__text Заявление для УК Пушкинский
+                            a(href="#").linc-arrow Скачать
+                                .linc-arrow__icon.linc-arrow__icon_down
+                                    svg(width="18", height="14")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")                                
+                        li.download-list__item 
+                            .download-list__text Заявление для УК Московский
+                            a(href="#").linc-arrow Скачать
+                                .linc-arrow__icon.linc-arrow__icon_down
+                                    svg(width="18", height="14")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")                                
+                        li.download-list__item 
+                            .download-list__text Бланк на переуступку
+                            a(href="#").linc-arrow Скачать
+                                .linc-arrow__icon.linc-arrow__icon_down
+                                    svg(width="18", height="14")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")                                
+                        li.download-list__item 
+                            .download-list__text Ещё какой-то бланк
+                            a(href="#").linc-arrow Скачать
+                                .linc-arrow__icon.linc-arrow__icon_down
+                                    svg(width="18", height="14")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")                                
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .data-header 
+                    .data-header__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-points")
+                    h2.data-header__h Схема регистрации собственности
+
+                ul.schema-regist
+                    li.schema-regist__item 
+                        .schema-regist__icon 
+                            svg(width="50", height="50")
+                                use(xlink:href="./assets/images/sprite.svg#icon-01")
+                        .schema-regist__body
+                            h4.schema-regist__h Начало
+                            p.schema-regist__text Акт приема-передачи подписан, пакет документов и ключи получены. Следующий этап зарегистрировать право собственности на приобретенную квартиру.
+
+                    li.schema-regist__item 
+                        .schema-regist__icon 
+                            svg(width="50", height="50")
+                                use(xlink:href="./assets/images/sprite.svg#icon-02")
+                        .schema-regist__body
+                            h4.schema-regist__h Этап 1
+                            p.schema-regist__text Уточнить у застройщика можно ли оформить право собственности на квартиру в собственность в Едином государственном реестре недвижимости (ЕГРН). Это станет возможным после того, как дом будет поставлен на кадастровый учет. Застройщик обязательно проинформирует Вас об этом.
+
+                    li.schema-regist__item 
+                        .schema-regist__icon 
+                            svg(width="50", height="50")
+                                use(xlink:href="./assets/images/sprite.svg#icon-03")
+                        .schema-regist__body
+                            h4.schema-regist__h Этап 2
+                            p.schema-regist__text Подготовка документов для подачи в МФЦ. Точный список на сайте 
+                                a(href="rosreestr.gov.ru") rosreestr.gov.ru
+                            a(href="#").linc-arrow Открыть список
+                                .linc-arrow__icon
+                                    svg(width="18", height="14")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")                             
+
+                    li.schema-regist__item 
+                        .schema-regist__icon 
+                            svg(width="50", height="50")
+                                use(xlink:href="./assets/images/sprite.svg#icon-04")
+                        .schema-regist__body
+                            h4.schema-regist__h Этап 3
+                            p.schema-regist__text На приеме сотрудник МФЦ составит заявление о регистрации права собственности. Заберет пакет документов и выдаст расписку о приеме.  Вас проинформирую о том, как Вы сможете узнать о готовности. Принятые документы и заявления передадут регистратору, он зарегистрирует право собственности и закладную, если она предоставлялась. Сроки регистрации представлены на сайте 
+                                a(href="rosreestr.gov.ru") rosreestr.gov.ru
+
+                    li.schema-regist__item 
+                        .schema-regist__icon 
+                            svg(width="50", height="50")
+                                use(xlink:href="./assets/images/sprite.svg#icon-05")
+                        .schema-regist__body
+                            h4.schema-regist__h Этап 4
+                            p.schema-regist__text В назначенный день собственники должны забрать свой пакет документов. Если собственников несколько, им необязательно забирать их одновременно. При себе следует иметь паспорта и расписки. Ваше имя будет указано в выписке из ЕГРН, которая заменила собой бумажные свидетельства о собственности. После регистрации и получения выписки станет возможна прописка в новой квартире. 
+                            
+
+
+
+
+
+
+
+
+
+

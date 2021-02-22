@@ -139,3 +139,18 @@ if (bronProgresList) {
 		});
 	}
 }
+
+// https://github.com/michu2k/Accordion
+// faq
+const helpFaqList = document.querySelectorAll(".help-faq");
+if (helpFaqList) {
+	for (const helpFaq of helpFaqList) {
+		new Accordion(helpFaq, {
+			duration: 400,
+			elementClass: "help-faq-item",
+			triggerClass: "help-faq-item__head",
+			panelClass: "help-faq-item__body",
+			activeClass: activeClass,
+		});
+	}
+}
