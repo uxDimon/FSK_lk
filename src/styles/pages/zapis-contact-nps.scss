@@ -1,0 +1,96 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+$content-max-weight: 1200px;
+$content-padding: 0 16px;
+// Fix: Слышь удоли ↑
+
+// apart-card
+.apart-card {
+	padding: 30px;
+	border: 1px solid var(--color-border);
+	display: flex;
+	align-items: center;
+	border-radius: 3px;
+}
+
+.apart-card__img {
+	width: 152px;
+	height: 152px;
+	object-fit: cover;
+	display: block;
+	margin-right: 40px;
+	flex-shrink: 0;
+}
+
+.apart-card__h {
+	margin: 0 0 22px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.apart-card__options-wrap {
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 65px;
+	justify-content: center;
+}
+
+.apart-card__options {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.apart-card__name {
+	color: var(--color-dop);
+}
+
+.apart-card__value {
+	font-weight: 500;
+}
+
+// warning-blck
+.warning-blck {
+	display: flex;
+	align-items: center;
+}
+
+.warning-blck__icon {
+	display: block;
+	flex-shrink: 0;
+	margin-right: 14px;
+}
+
+.warning-blck__text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+}
+
+// button-text-wrap
+.button-text-wrap {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-auto-flow: column;
+	grid-column-gap: 24px;
+	align-items: start;
+}
+
+.button-text-wrap__text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+	color: var(--color-dop-text);
+	margin-right: 12px;
+}

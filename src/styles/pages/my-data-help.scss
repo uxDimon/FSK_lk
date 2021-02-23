@@ -14,6 +14,7 @@ $content-max-weight: 1200px;
 $content-padding: 0 16px;
 // Fix: Слышь удоли ↑
 
+// data-header
 .data-header {
 	background-color: var(--color-dop-back);
 	border-radius: 3px;
@@ -47,6 +48,12 @@ $content-padding: 0 16px;
 	line-height: 30px;
 	color: var(--color-main-text);
 	margin: 0;
+}
+
+.data-header__text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
 }
 
 .data-input-block {

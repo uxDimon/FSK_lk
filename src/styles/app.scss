@@ -104,12 +104,16 @@ a {
 	margin: 30px 0;
 }
 
+.cont-block_mb30 {
+	margin: 0 0 30px;
+}
+
 .cont-block_m70 {
 	margin: 70px 0;
 }
 
 .cont-block_mb70 {
-	margin: 0 0 70px 0;
+	margin: 0 0 70px;
 }
 
 .cont-block__h1 {
@@ -634,7 +638,8 @@ body.dark {
 @import "./pages/login.scss";
 @import "./pages/main-page.scss";
 @import "./pages/broni.scss";
-@import "./pages/my-data.scss";
+@import "./pages/my-data-help.scss";
+@import "./pages/zapis-contact-nps.scss";
 @import "./common/footer.scss";
 
 // @media screen and (max-width: 1274px) {
