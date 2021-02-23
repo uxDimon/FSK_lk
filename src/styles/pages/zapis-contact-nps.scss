@@ -252,3 +252,25 @@ $content-padding: 0 16px;
 		--icon-color: var(--color-main-text);
 	}
 }
+
+// nps-poll
+.nps-poll {
+	display: grid;
+	grid-row-gap: 50px;
+}
+
+.nps-poll__button-warp {
+	display: flex;
+
+	.button {
+		flex-shrink: 0;
+	}
+}
+
+.nps-poll__button-text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+	color: var(--color-dop-text);
+	margin-left: 50px;
+}

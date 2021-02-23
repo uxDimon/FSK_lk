@@ -1,0 +1,151 @@
+extends ../template
+
+block variables
+    - var title = 'NPS опрос дольщиков со своим URL адресом'
+    - var header = true
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 NPS опрос дольщиков со своим URL адресом
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Главная
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Личный кабинет
+                    li.bread-cru__item 
+                        .bread-cru__linc NPS опрос дольщиков со своим URL адресом
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .nps-poll
+                    .input-radio-wrap
+                        .input-radio-wrap__trxt_strong Вы довольны работой сотрудников на приемке квартиры?
+                        .input-radio-wrap__input.input-radio-wrap__input_more
+                            label.input-check
+                                input(type="radio", name="radio1").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Да
+                            label.input-check
+                                input(type="radio", name="radio1", checked).input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Нет
+                            label.input-check
+                                input(type="radio", name="radio1", checked).input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Затрудняюсь ответить
+                    
+                    .input-radio-wrap
+                        .input-radio-wrap__trxt_strong Вы довольны работой сотрудников на приемке квартиры?
+                        .input-radio-wrap__input.input-radio-wrap__input_more-inside
+                            label.input-check.input-check_inside
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 1
+                            label.input-check.input-check_inside
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 2
+                            label.input-check.input-check_inside
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 3
+                            label.input-check.input-check_inside
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 4
+                            label.input-check.input-check_inside
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 5
+                            label.input-check.input-check_inside
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 6
+                            label.input-check.input-check_inside
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 7
+                            label.input-check.input-check_inside
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 8
+                            label.input-check.input-check_inside
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 9
+                            label.input-check.input-check_inside
+                                input(type="radio", name="radio2").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 10
+
+                    .input-radio-wrap
+                        .input-radio-wrap__trxt_strong Сколько заняла приемка?
+                        .input-radio-wrap__input.input-radio-wrap__input_more
+                            label.input-check
+                                input(type="radio", name="radio3").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text 30-40 мин
+                            label.input-check
+                                input(type="radio", name="radio3").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Чуть больше часа
+                            label.input-check
+                                input(type="radio", name="radio3").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Около 2-3 часов
+                            label.input-check
+                                input(type="radio", name="radio3").input-check__input
+                                .input-check__mimic
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                .input-check__text Весь день
+
+                    .nps-poll__button-warp 
+                        button(type="submit").button Отправить ответы
+                        .nps-poll__button-text В данном разделе находится вся документация по проекту, среди которой: разрешение на строительство, проектная декларация, проект договора ДДУ, документы на земельный участок пр.
+
+
+
+
+
+
+
+
+
+
+
+
