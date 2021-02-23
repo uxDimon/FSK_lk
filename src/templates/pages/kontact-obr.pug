@@ -1,0 +1,130 @@
+extends ../template
+
+block variables
+    - var title = 'Контакты и обращения'
+    - var header = true
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Контакты и обращения
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Главная
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Личный кабинет
+                    li.bread-cru__item 
+                        .bread-cru__linc Контакты и обращения
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .contact-icon
+                    .contact-icon__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-support")                                
+                    .contact-icon__body 
+                        h3.contact-icon__h Вопросы по покупке (отдел продаж)
+                        ul.contact-icon__info-wrap 
+                            li.contact-icon__info 
+                                .contact-icon__name Телефон:
+                                a(href="tel:+74951064607").contact-icon__value +7 (495) 106-4607
+                            li.contact-icon__info 
+                                .contact-icon__name E-mail:
+                                a(href="mailto:info@fsknw.ru").contact-icon__value info@fsknw.ru
+                            li.contact-icon__info 
+                                .contact-icon__name Время работы:
+                                .contact-icon__value Ежедневно с 9:00 до 21:00
+                
+                .contact-icon 
+                    .contact-icon__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-key")                                
+                    .contact-icon__body 
+                        h3.contact-icon__h Вопросы послепродажного обслуживания (отдел клиентского сервиса)
+                        ul.contact-icon__info-wrap 
+                            li.contact-icon__info 
+                                .contact-icon__name Телефон:
+                                a(href="tel:+74951064607").contact-icon__value +7 (495) 106-4607
+                            li.contact-icon__info 
+                                .contact-icon__name E-mail:
+                                a(href="mailto:info@fsknw.ru").contact-icon__value info@fsknw.ru
+                            li.contact-icon__info 
+                                .contact-icon__name Время работы:
+                                .contact-icon__value По будням с 9:30 до 18:00
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                table.cont-table
+                    thead
+                        tr
+                            td Тема обращения
+                            td.center  Дата
+                            td.center  Стату
+                    tbody
+                        tr.active
+                            td У меня не работает счетчик ХВС, но меня это устраивает. Законно ли...
+                            td.center  26.04.2020
+                            td
+                                .state
+                                    .small-icon_ok
+                                        svg(width="14", height="14")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-ок")                                
+                                    span В работе
+                        tr
+                            td Можно ли принять квартиру по рукописной доверенности?
+                            td.center  15.01.2020
+                            td
+                                .state
+                                    .small-icon_time
+                                        svg(width="14", height="14")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-time")                                
+                                    span Решено
+                        tr
+                            td
+                                .name Убежала собака, но её поймали ваши рабочие, и не отдают. См. фото!!!
+                                    a(href="#").small-icon_clip
+                                        svg(width="14", height="14")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-clip")                                
+                            td.center  01.08.2019
+                            td
+                                .state
+                                    .small-icon_time
+                                        svg(width="14", height="14")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-time")                                
+                                    span Решено
+                        tr
+                            td Успею ли я принять квартиру за 7 минут? Тороплюсь на самолет.
+                            td.center  18.05.2019
+                            td
+                                .state
+                                    .small-icon_cross
+                                        svg(width="14", height="14")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-cross")                                
+                                    span Закрыто
+                        tr
+                            td
+                                .name Пристает сосед (видео во вложении). Куда звонить, чтобы не приставал?
+                                    a(href="#").small-icon_clip
+                                        svg(width="14", height="14")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-clip")                                
+                            td.center  21.01.2019
+                            td
+                                .state
+                                    .small-icon_cross
+                                        svg(width="14", height="14")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-cross")                                
+                                    span Закрыто
+                
+                .data-button-wrap
+                    button(type="submit").button Написать нам
+                
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .no-ticket
+                    .no-ticket__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-doc")
+
+                .data-button-wrap
+                    button(type="submit").button Написать нам

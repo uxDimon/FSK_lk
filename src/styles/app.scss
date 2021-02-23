@@ -629,6 +629,37 @@ body.dark {
 	}
 }
 
+// small-icon
+.small-icon_ok,
+.small-icon_time,
+.small-icon_cross,
+.small-icon_clip {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border-radius: 14px;
+
+	svg {
+		display: block;
+	}
+}
+
+.small-icon_ok {
+	background-color: var(--color-cta);
+}
+
+.small-icon_time {
+	background-color: var(--color-alert);
+}
+
+.small-icon_cross {
+	background-color: var(--color-error);
+}
+
+.small-icon_clip {
+	border-radius: 0;
+}
+
 // .udoli ↓
 .udoli {
 	background-color: aqua;

@@ -185,17 +185,8 @@ $content-padding: 0 16px;
 }
 
 .bron-card-info__options-item-ok {
-	display: inline-block;
-	width: 14px;
-	height: 14px;
-	margin-bottom: -1px;
 	margin-right: 8px;
-	background-color: var(--color-cta);
-	border-radius: 14px;
-
-	svg {
-		display: block;
-	}
+	margin-bottom: -1px;
 }
 
 .bron-card-info__prise-wrap {
