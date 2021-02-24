@@ -1,4 +1,4 @@
-# Демо https://uxdimon.github.io/vasyan/map.html
+# Демо https://uxdimon.github.io/FSK_lk/index.html
 
 ## Использование
 
