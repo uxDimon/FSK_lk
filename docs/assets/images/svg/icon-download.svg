@@ -1,0 +1,8 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 2V12.375" stroke="var(--icon-color, #BEBEBE)" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round" />
+    <path d="M7 10.5L10 13.5L13 10.5" stroke="var(--icon-color, #BEBEBE)" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round" />
+    <path d="M2.75 15.5V18.231H17V15.5" stroke="var(--icon-color, #BEBEBE)" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round" />
+</svg>
