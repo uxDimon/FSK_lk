@@ -1,4 +1,4 @@
-# Демо https://uxdimon.github.io/FSK_lk/index.html
+# Демо https://uxdimon.github.io/FSK_lk/
 
 ## Использование
 
