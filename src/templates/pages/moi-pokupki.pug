@@ -1,0 +1,432 @@
+extends ../template
+
+block variables
+    - var title = 'Мои покупки'
+    - var header = true
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Мои покупки
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Главная
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Личный кабинет
+                    li.bread-cru__item 
+                        .bread-cru__linc Мои покупки
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .card-tab-wrap 
+                    .bron-card(data-tab-id="wrapCard1", data-tab-block="1",)
+                        .bron-card-nav
+                            button(data-tab-id="card1", data-tab-control="1").bron-card-nav__button-tab.active
+                                span Планировка
+                            button(data-tab-id="card1", data-tab-control="2").bron-card-nav__button-tab
+                                span На этаже
+                            button(data-tab-id="card1", data-tab-control="3").bron-card-nav__button-tab
+                                span Схема корпусов
+                            button(data-tab-id="card1", data-tab-control="4").bron-card-nav__button-tab
+                                span Отделка
+                            a(href="#", title="Информация").bron-card-nav__info
+                                svg(width="26", height="27")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-info")
+                        
+                        .bron-card-body
+                            .bron-card-body__button-zoom.button-zoom
+                                svg(width="18", height="14")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow-two")
+                            .bron-card-body__back    
+                                svg(width="223", height="50").bron-card-body__back-img
+                                    use(xlink:href="./assets/images/sprite.svg#progress-logo")
+                            .bron-card-body__img-wrap
+                                img(data-tab-id="card1", data-tab-block="1", data-zoomable, src="./assets/images/bron-card1.png", alt="Планировка").bron-card-body__img
+                                img(data-tab-id="card1", data-tab-block="2", data-zoomable, src="./assets/images/bron-card2.png", alt="На этаже", style="display: none;").bron-card-body__img
+                                img(data-tab-id="card1", data-tab-block="3", data-zoomable, src="./assets/images/bron-card3.png", alt="Схема корпусов", style="display: none;").bron-card-body__img
+                                img(data-tab-id="card1", data-tab-block="4", data-zoomable, src="./assets/images/bron-card4.png", alt="Отделка", style="display: none;").bron-card-body__img
+
+                        .bron-card-info
+                            .bron-card-info__linc-wrap 
+                                a(href="#", title="Поделится").bron-card-info__linc
+                                    svg(width="20", height="20")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-share")
+                                a(href="#", title="Скачать").bron-card-info__linc
+                                    svg(width="20", height="20")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-download")
+                                a(href="#", title="Распечатать").bron-card-info__linc
+                                    svg(width="20", height="20")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-print")
+
+                            h3.bron-card-info__h 3-к квартира (№ 752), 42 м²
+
+                            .bron-card-info__options-wrap
+                                ul.bron-card-info__options-list
+                                    li.bron-card-info__options-item 
+                                        span Проект
+                                        span UP-квартал Пушкинский
+                                    li.bron-card-info__options-item 
+                                        span Корпус / секция
+                                        span 6.1 / 2
+                                    li.bron-card-info__options-item 
+                                        span Общая площадь
+                                        span 27 м2
+                                    li.bron-card-info__options-item 
+                                        span Жилая площадь
+                                        span 16 м2
+                                    li.bron-card-info__options-item 
+                                        span Площадь кухни
+                                        span 5 м2
+                                    li.bron-card-info__options-item 
+                                        span Этаж / этажей
+                                        span 21 / 26
+                                    li.bron-card-info__options-item 
+                                        span Отделка
+                                        span Предчистовая
+                                
+                                ul.bron-card-info__options-list
+                                    li.bron-card-info__options-item 
+                                        span Оплата брони
+                                        span
+                                            .small-icon_ok.bron-card-info__options-item-ok
+                                                svg(width="14", height="14")
+                                                    use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                            span 20 000
+                                    li.bron-card-info__options-item 
+                                        span Дата брони
+                                        span 22.05.2020
+                                    li.bron-card-info__options-item 
+                                        span Резерв до
+                                        span 27.05.2020
+                            
+                            .bron-card-info__prise-wrap 
+                                .bron-card-info__prise Цена по акции: 10 825 430 р.
+                                .bron-card-info__prise-old Базовая цена: 12 230 120 р.
+                                .bron-card-info__prise-old ID квартиры: 45 702
+                    
+                    .bron-card(data-tab-id="wrapCard1", data-tab-block="2",)
+                        .bron-card-nav
+                            button(data-tab-id="card2", data-tab-control="1").bron-card-nav__button-tab.active
+                                span Планировка
+                            button(data-tab-id="card2", data-tab-control="2").bron-card-nav__button-tab
+                                span На этаже
+                            button(data-tab-id="card2", data-tab-control="3").bron-card-nav__button-tab
+                                span Схема корпусов
+                            button(data-tab-id="card2", data-tab-control="4").bron-card-nav__button-tab
+                                span Отделка
+                            a(href="#", title="Информация").bron-card-nav__info
+                                svg(width="26", height="27")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-info")
+                        
+                        .bron-card-body
+                            .bron-card-body__button-zoom.button-zoom
+                                svg(width="18", height="14")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow-two")
+                            .bron-card-body__back    
+                                svg(width="223", height="50").bron-card-body__back-img
+                                    use(xlink:href="./assets/images/sprite.svg#progress-logo")
+                            .bron-card-body__img-wrap
+                                img(data-tab-id="card2", data-tab-block="1", data-zoomable, src="./assets/images/bron-card1.png", alt="Планировка").bron-card-body__img
+                                img(data-tab-id="card2", data-tab-block="2", data-zoomable, src="./assets/images/bron-card2.png", alt="На этаже", style="display: none;").bron-card-body__img
+                                img(data-tab-id="card2", data-tab-block="3", data-zoomable, src="./assets/images/bron-card3.png", alt="Схема корпусов", style="display: none;").bron-card-body__img
+                                img(data-tab-id="card2", data-tab-block="4", data-zoomable, src="./assets/images/bron-card4.png", alt="Отделка", style="display: none;").bron-card-body__img
+
+                        .bron-card-info
+                            .bron-card-info__linc-wrap 
+                                a(href="#", title="Поделится").bron-card-info__linc
+                                    svg(width="20", height="20")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-share")
+                                a(href="#", title="Скачать").bron-card-info__linc
+                                    svg(width="20", height="20")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-download")
+                                a(href="#", title="Распечатать").bron-card-info__linc
+                                    svg(width="20", height="20")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-print")
+
+                            h3.bron-card-info__h 3-к квартира (№ 752), 42 м²
+
+                            .bron-card-info__options-wrap
+                                ul.bron-card-info__options-list
+                                    li.bron-card-info__options-item 
+                                        span Проект
+                                        span UP-квартал Пушкинский
+                                    li.bron-card-info__options-item 
+                                        span Корпус / секция
+                                        span 6.1 / 2
+                                    li.bron-card-info__options-item 
+                                        span Общая площадь
+                                        span 27 м2
+                                    li.bron-card-info__options-item 
+                                        span Жилая площадь
+                                        span 16 м2
+                                    li.bron-card-info__options-item 
+                                        span Площадь кухни
+                                        span 5 м2
+                                    li.bron-card-info__options-item 
+                                        span Этаж / этажей
+                                        span 21 / 26
+                                    li.bron-card-info__options-item 
+                                        span Отделка
+                                        span Предчистовая
+                                
+                                ul.bron-card-info__options-list
+                                    li.bron-card-info__options-item 
+                                        span Оплата брони
+                                        span
+                                            .small-icon_ok.bron-card-info__options-item-ok
+                                                svg(width="14", height="14")
+                                                    use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                            span 20 000
+                                    li.bron-card-info__options-item 
+                                        span Дата брони
+                                        span 22.05.2020
+                                    li.bron-card-info__options-item 
+                                        span Резерв до
+                                        span 27.05.2020
+                            
+                            .bron-card-info__prise-wrap 
+                                .bron-card-info__prise Цена по акции: 10 825 430 р.
+                                .bron-card-info__prise-old Базовая цена: 12 230 120 р.
+                                .bron-card-info__prise-old ID квартиры: 45 702
+
+                .card-tab-controll__wrap
+                    button(data-tab-id="wrapCard1", data-tab-control="1").card-tab-controll
+                        img(src="./assets/images/plan.png", width="117", height="117", alt=" 3-к квартира, 142 м2" ).card-tab-controll__img 
+                        .card-tab-controll__body 
+                            .card-tab-controll__size 3-к квартира, 142 м2
+                            .card-tab-controll__name UP Пушкинский
+                            .card-tab-controll__prise 18 535 078 р.  
+                    button(data-tab-id="wrapCard1", data-tab-control="2").card-tab-controll
+                        img(src="./assets/images/plan.png", width="117", height="117", alt=" 3-к квартира, 142 м2" ).card-tab-controll__img 
+                        .card-tab-controll__body 
+                            .card-tab-controll__size 3-к квартира, 142 м2
+                            .card-tab-controll__name UP Пушкинский
+                            .card-tab-controll__prise 18 535 078 р.
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                h2.cont-block__h Персональные документы
+
+                ul.pers-docs__wrap
+                    li.pers-docs
+                        a(href="#").pers-docs__linc
+                            .pers-docs__text Договор долевого <br>участия
+                            .pers-docs__icon
+                                svg(width="18", height="14")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")
+                    li.pers-docs
+                        a(href="#").pers-docs__linc
+                            .pers-docs__text Обмеры <br>ПИБ
+                            .pers-docs__icon
+                                svg(width="18", height="14")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")
+                    li.pers-docs
+                        a(href="#").pers-docs__linc
+                            .pers-docs__text Какой-то акт <br>сверки
+                            .pers-docs__icon
+                                svg(width="18", height="14")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")
+                    li.pers-docs
+                        a(href="#").pers-docs__linc
+                            .pers-docs__text Отчет о сверке <br>каких-то документов
+                            .pers-docs__icon
+                                svg(width="18", height="14")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                h2.cont-block__h Документация по проекту
+
+                .bron-progres-linc
+                    .bron-progres-linc__body
+                        .bron-progres-linc__text В данном разделе находится вся документация по проекту, среди которой: разрешение на строительство, проектная декларация, проект договора ДДУ, документы на земельный участок пр.
+                    a(href="#").bron-progres-linc__linc
+                        svg(width="18", height="14")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                h2.cont-block__h Ход строительства
+
+                .building-progress__input-wrap 
+                    .building-progress__input-wrap-left
+                        lable.input
+                            select(name="").input__input
+                                option(value="1") Январь
+                                option(value="1") Февраль
+                                option(value="1") Март
+                                option(value="1") Апрель
+                                option(value="2") Май
+                                option(value="2") Июнь
+                                option(value="2") Июль
+                                option(value="2") Август
+                                option(value="3") Сентябрь
+                                option(value="3") Октябрь
+                                option(value="3") Ноябрь
+                                option(value="3") Декабрь
+                        
+                        lable.input
+                            select(name="").input__input
+                                option(value="1") 2019
+                                option(value="2") 2020
+                                option(value="3") 2021                       
+
+                    .building-progress__input-wrap-right
+                        a(href="#").button.button_icon
+                            .button-icon__icon
+                                svg(width="20", height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-camera")
+                            span Камера 1
+                        a(href="#").button.button_icon
+                            .button-icon__icon
+                                svg(width="20", height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-camera")
+                            span Камера 2
+                        a(href="#").button.button_icon
+                            .button-icon__icon
+                                svg(width="20", height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-camera")
+                            span Камера 3
+                
+                .progress-slider__wrap
+                    .progress-slider.swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                .progress-slider__slide
+                                    img(src="./assets/images/image24.jpg", data-zoomable, alt="Опубликовано: 22.12.2020 - Братковский М.М.").progress-slider__img
+                                    .progress-slider__description Опубликовано: 22.12.2020 - Братковский М.М. 1
+                            .swiper-slide
+                                .progress-slider__slide
+                                    img(src="./assets/images/image24.jpg", data-zoomable, alt="Опубликовано: 22.12.2020 - Братковский М.М.").progress-slider__img
+                                    .progress-slider__description Опубликовано: 22.12.2020 - Братковский М.М. 2
+                            .swiper-slide
+                                .progress-slider__slide
+                                    img(src="./assets/images/image24.jpg", data-zoomable, alt="Опубликовано: 22.12.2020 - Братковский М.М.").progress-slider__img
+                                    .progress-slider__description Опубликовано: 22.12.2020 - Братковский М.М. 3
+                            .swiper-slide
+                                .progress-slider__slide
+                                    img(src="./assets/images/image24.jpg", data-zoomable, alt="Опубликовано: 22.12.2020 - Братковский М.М.").progress-slider__img
+                                    .progress-slider__description Опубликовано: 22.12.2020 - Братковский М.М. 4
+                            .swiper-slide
+                                .progress-slider__slide
+                                    img(src="./assets/images/image24.jpg", data-zoomable, alt="Опубликовано: 22.12.2020 - Братковский М.М.").progress-slider__img
+                                    .progress-slider__description Опубликовано: 22.12.2020 - Братковский М.М. 5
+                            .swiper-slide
+                                .progress-slider__slide
+                                    img(src="./assets/images/image24.jpg", data-zoomable, alt="Опубликовано: 22.12.2020 - Братковский М.М.").progress-slider__img
+                                    .progress-slider__description Опубликовано: 22.12.2020 - Братковский М.М. 6
+                            .swiper-slide
+                                .progress-slider__slide
+                                    img(src="./assets/images/image24.jpg", data-zoomable, alt="Опубликовано: 22.12.2020 - Братковский М.М.").progress-slider__img
+                                    .progress-slider__description Опубликовано: 22.12.2020 - Братковский М.М. 7
+                            .swiper-slide
+                                .progress-slider__slide
+                                    img(src="./assets/images/image24.jpg", data-zoomable, alt="Опубликовано: 22.12.2020 - Братковский М.М.").progress-slider__img
+                                    .progress-slider__description Опубликовано: 22.12.2020 - Братковский М.М. 8
+                            .swiper-slide
+                                .progress-slider__slide
+                                    img(src="./assets/images/image24.jpg", data-zoomable, alt="Опубликовано: 22.12.2020 - Братковский М.М.").progress-slider__img
+                                    .progress-slider__description Опубликовано: 22.12.2020 - Братковский М.М. 7
+                            .swiper-slide
+                                .progress-slider__slide
+                                    img(src="./assets/images/image24.jpg", data-zoomable, alt="Опубликовано: 22.12.2020 - Братковский М.М.").progress-slider__img
+                                    .progress-slider__description Опубликовано: 22.12.2020 - Братковский М.М. 8
+
+                        .progress-slider__button-wrap
+                            .progress-slider__button-next.button-next
+                                svg(width="18", height="14")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")
+                            .progress-slider__button-prev.button-prev
+                                svg(width="18", height="14")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow-full")
+                        
+                        .progress-slider__button-zoom.button-zoom
+                            svg(width="18", height="14")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow-two")
+
+                    .progress-slider__thumbs
+                        .swiper-wrapper
+                            .swiper-slide(style="background-image:url(./assets/images/image24.jpg)")
+                            .swiper-slide(style="background-image:url(./assets/images/image24.jpg)")
+                            .swiper-slide(style="background-image:url(./assets/images/image24.jpg)")
+                            .swiper-slide(style="background-image:url(./assets/images/image24.jpg)")
+                            .swiper-slide(style="background-image:url(./assets/images/image24.jpg)")
+                            .swiper-slide(style="background-image:url(./assets/images/image24.jpg)")
+                            .swiper-slide(style="background-image:url(./assets/images/image24.jpg)")
+                            .swiper-slide(style="background-image:url(./assets/images/image24.jpg)")
+                            .swiper-slide(style="background-image:url(./assets/images/image24.jpg)")
+                            .swiper-slide(style="background-image:url(./assets/images/image24.jpg)")
+
+                .bron-progres-linc
+                    .bron-progres-linc__body
+                        .bron-progres-linc__text Какое-то описание произведенных работ. Какое-то описание произведенных работ. Какое-то описание произведенных работ. Какое-то описание произведенных работ. Какое-то описание произведенных работ. Какое-то описание произведенных работ. 
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                h2.cont-block__h Взаиморасчеты по договору
+
+                table.cont-table
+                    thead
+                        tr
+                            td.center Дата
+                            td.center Начислено, р.
+                            td.center Оплата, р.
+                            td.center Остаток, р.
+                    tbody
+                        tr.active
+                            td.center 12.03.2020
+                            td.center 2 260 000
+                            td.center 80 000
+                            td.center 2 180 000
+                        tr.active
+                            td.center 12.03.2020
+                            td.center 2 260 000
+                            td.center 80 000
+                            td.center 2 180 000
+                        tr.active
+                            td.center 12.03.2020
+                            td.center 2 260 000
+                            td.center 80 000
+                            td.center 2 180 000
+                        tr.active
+                            td.center 12.03.2020
+                            td.center 2 260 000
+                            td.center 80 000
+                            td.center 2 180 000
+                        tr.active
+                            td.center 12.03.2020
+                            td.center 2 260 000
+                            td.center 80 000
+                            td.center 2 180 000
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                h2.cont-block__h Полезные дополнения
+                
+                .plus-dop__wrap
+                    .plus-dop
+                        .plus-dop__body 
+                            .plus-dop__name Машиноместа <br>в паркинге
+                            a(href="#").button.button_icon.main-slider__button
+                                .button-icon__icon
+                                    svg(width="10", height="5")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                                span Подробнее
+                        img(src="./assets/images/plus-dop01.png", alt="Машиноместа в паркинге").plus-dop__img
+                    .plus-dop
+                        .plus-dop__body 
+                            .plus-dop__name Коммерческие <br>помещения
+                            a(href="#").button.button_icon.main-slider__button
+                                .button-icon__icon
+                                    svg(width="10", height="5")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                                span Подробнее
+                        img(src="./assets/images/plus-dop02.png", alt="Машиноместа в паркинге").plus-dop__img
+                            
+
+
+
+
+
+

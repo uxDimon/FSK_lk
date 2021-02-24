@@ -88,6 +88,30 @@ if (mainSliderList) {
 	}
 }
 
+const progresSsliderList = document.querySelectorAll(".progress-slider__wrap");
+if (progresSsliderList) {
+	for (const progresSslider of progresSsliderList) {
+		let galleryThumbs = new Swiper(progresSslider.querySelector(".progress-slider__thumbs"), {
+			spaceBetween: 24,
+			direction: "vertical",
+			slidesPerView: 4,
+			slidesPerColumn: 2,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+		});
+		let galleryTop = new Swiper(progresSslider.querySelector(".progress-slider"), {
+			spaceBetween: 10,
+			navigation: {
+				nextEl: ".progress-slider__button-prev",
+				prevEl: ".progress-slider__button-next",
+			},
+			thumbs: {
+				swiper: galleryThumbs,
+			},
+		});
+	}
+}
+
 //- https://github.com/francoischalifour/medium-zoom
 mediumZoom("[data-zoomable]", {
 	margin: 24,

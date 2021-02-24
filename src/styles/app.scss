@@ -614,6 +614,25 @@ body.dark {
 	&:hover {
 		box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 		border-color: transparent;
+		color: var(--color-main-text);
+	}
+}
+
+.button-icon__icon {
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	border: 1px solid var(--color-main);
+	margin-right: 10px;
+	position: relative;
+
+	> svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(-90deg);
+		--icon-color: var(--color-main);
+		--icon-stroke: 1;
 	}
 }
 

@@ -57,24 +57,6 @@ $content-padding: 0 16px;
 	align-self: flex-start;
 }
 
-.main-slider__button-icon {
-	width: 20px;
-	height: 20px;
-	border-radius: 20px;
-	border: 1px solid var(--color-main);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-right: 10px;
-
-	> svg {
-		--icon-color: var(--color-main);
-		--icon-stroke: 1;
-		transform: rotate(-90deg);
-		margin-left: 1px;
-	}
-}
-
 .main-slider__content-right {
 	position: absolute;
 	top: 0;
