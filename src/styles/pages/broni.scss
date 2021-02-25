@@ -400,3 +400,81 @@ $content-padding: 0 16px;
 		transform: translate(-50%, -50%) rotate(-90deg);
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.bron-card {
+		grid-template-columns: 1fr;
+	}
+	.bron-card-info {
+		width: 100%;
+	}
+	.bron-card-info__options-item {
+		&:first-of-type {
+			span:last-of-type {
+				text-align: right;
+			}
+		}
+	}
+	.bron-card-nav {
+		grid-template-rows: initial;
+		grid-auto-flow: column;
+		column-gap: 20px;
+		overflow-x: scroll;
+
+		> * {
+			&:last-child {
+				display: flex;
+
+				&::after {
+					display: block;
+					content: '';
+					width: 4px;
+					height: 4px;
+				}
+			}
+		}
+	}
+	.bron-card-nav__button-tab {
+		white-space: nowrap;
+	}
+	.bron-card-nav__button-tab > span {
+		writing-mode: horizontal-tb;
+	}
+	.bron-card-body__back-img {
+		height: 65px;
+	}
+	.bron-progres-linc, .bron-progres {
+		column-gap: 20px;
+		padding: 20px 16px;
+		margin-bottom: 50px;
+	}
+	.bron-progres-linc__text {
+		font-size: 14px;
+	}
+	.bron-progres__body {
+		grid-template-columns: 1fr;
+	}
+	.bron-progres__list {
+		&:first-of-type {
+			.bron-progres__item:last-child::after {
+				bottom: 0;
+			}
+		}
+
+		&:last-of-type {
+			.bron-progres__item:first-child::after {
+				top: 0;
+			}
+		}
+	}
+	.bron-progres__item {
+		padding: 16px 0 16px 16px;
+	}
+	.bron-progres__item.active {
+		width: 75%;
+		left: 15px;
+	}
+	.bron-progres.active .bron-progres__item.active {
+		width: 100%;
+	}
+}

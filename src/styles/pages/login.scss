@@ -103,3 +103,24 @@ $content-padding: 0 16px;
 		}
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.login {
+		width: calc(100% - 32px);
+		padding: 30px 16px 40px;
+	}
+	.login__main-logo {
+		margin-bottom: 30px;
+	}
+	.login-form__h {
+		font-size: 21px;
+		line-height: 120%;
+		margin-bottom: 30px;
+	}
+	.login-form__bottom-wrap {
+		flex-direction: column;
+	}
+	.login-form__bottom-resend {
+		margin-bottom: 20px;
+	}
+}

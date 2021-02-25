@@ -121,6 +121,35 @@ $content-padding: 0 16px;
 	grid-column-gap: 24px;
 }
 
+@media screen and (max-width: 1023px) {
+
+}
+
+@media screen and (max-width: 767px) {
+	.data-header {
+		padding: 20px;
+	}
+	.data-header__icon {
+		min-width: 60px;
+	}
+	.data-header__h {
+		font-size: 20px;
+		line-height: 130%;
+	}
+	.data-input-block {
+		grid-template-columns: 1fr;
+	}
+	.data-checkbox-block {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.data-switch-block__text {
+		font-size: 14px;
+	}
+}
+
 // help-faq
 .help-faq {
 	border: 1px solid var(--color-border);
@@ -182,6 +211,16 @@ $content-padding: 0 16px;
 		font-size: 16px;
 		line-height: 21px;
 		color: var(--color-main-text);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.help-faq-item__head {
+		padding: 12px 16px;
+	}
+	.help-faq-item__button {
+		min-width: 20px;
+		margin-left: 10px;
 	}
 }
 
@@ -254,6 +293,12 @@ $content-padding: 0 16px;
 	transform: translate(-50%, -50%) rotate(90deg);
 }
 
+@media screen and (max-width: 767px) {
+	.download-list__item {
+		padding: 12px 16px;
+	}
+}
+
 // schema-regist
 .schema-regist {
 	display: grid;
@@ -307,5 +352,27 @@ $content-padding: 0 16px;
 	a {
 		font-weight: 500;
 		text-decoration: none;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.schema-regist {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.schema-regist {
+		grid-template-columns: 1fr;
+	}
+	.schema-regist__icon {
+		width: 50px;
+		height: 50px;
+		margin-right: 16px;
+		
+		svg {
+			width: 30px;
+			height: 30px;
+		}
 	}
 }

@@ -283,7 +283,8 @@ $content-padding: 0 16px;
 
 .card-tab-controll__wrap {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	// grid-template-columns: repeat(3, 1fr);
+	grid-auto-flow: column;
 	grid-gap: 24px;
 }
 
@@ -385,6 +386,7 @@ body.dark {
 	display: block;
 	position: relative;
 	width: 40px;
+	min-width: 40px;
 	height: 40px;
 	border-radius: 40px;
 	border: 2px solid var(--color-main);
@@ -565,4 +567,114 @@ body.dark {
 	object-fit: cover;
 	width: 320px;
 	height: 250px;
+}
+
+@media screen and (max-width: 1200px) {
+	.plus-dop__wrap {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.card-tab-controll__img {
+		margin-right: 20px;
+	}
+	.pers-docs__wrap {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.card-tab-controll {
+		padding: 12px 20px;
+	}
+	.card-tab-controll__wrap {
+		grid-auto-flow: row;
+	}
+	.pers-docs__wrap {
+		grid-template-columns: 1fr;
+	}
+	.cont-block__table-wrap {
+		overflow-x: scroll;
+		padding: 1px;
+	}
+	.cont-table {
+		min-width: 600px;
+	}
+	.state span {
+		white-space: nowrap;
+	}
+	.building-progress__input-wrap {
+		overflow-x: scroll;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+	}
+	.progress-slider {
+		height: 350px;
+	}
+	.progress-slider__wrap {
+		grid-template-columns: 1fr;
+	}
+	.progress-slider__thumbs {
+		display: none;
+	}
+
+	.apart-card {
+		flex-direction: column;
+		padding: 16px;
+	}
+	.apart-card__img {
+		margin-right: 0;
+	}
+	.apart-card__options-wrap {
+		grid-auto-flow: inherit;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+
+	.button-text-wrap {
+		grid-template-columns: 1fr;
+		grid-auto-flow: inherit;
+	}
+	.button-text-wrap__text {
+		order: 2;
+		margin-right: 0;
+		margin-top: 12px;
+	}
+
+	.contact-icon {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.contact-icon__info-wrap {
+		grid-auto-flow: row;
+		column-gap: 20px;
+	}
+	.contact-icon__icon {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.plus-dop {
+		flex-direction: column;
+	}
+	.plus-dop__img {
+		width: 100%;
+		order: 1;
+	}
+	.plus-dop__body {
+		order: 2;
+		padding: 16px;
+	}
+	.plus-dop__name {
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (max-width: 319px) {
+	.card-tab-controll {
+		flex-direction: column;
+		align-items: center;
+	}
 }
