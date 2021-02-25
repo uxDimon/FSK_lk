@@ -730,10 +730,65 @@ body.dark {
 
 // }
 
-// @media screen and (max-width: 960px) {
+@media screen and (max-width: 1023px) {
+	.input-radio-wrap__input_more {
+		grid-auto-flow: initial;
+		grid-template-columns: 1fr 1fr;
+		row-gap: 20px;
+	}
+}
 
-// }
+@media screen and (max-width: 768px) {
+	.cont-block__h1 {
+		font-size: 22px;
+		line-height: 130%;
+	}
+	.cont-block__h {
+		font-size: 22px;
+		line-height: 130%;
+	}
+	.input .input__input {
+		padding: 14px 10px;
+	}
+	.tel-country {
+		width: 70px;
+	}
+	.tel-country__img {
+		right: 12px;
+	}
 
-// @media screen and (max-width: 768px) {
+	.input-radio-wrap__input_more {
+		grid-auto-flow: row;
+		grid-template-columns: initial;
+		row-gap: 20px;
+	}
 
-// }
+	.input-radio-wrap__input_more-inside {
+		grid-auto-flow: initial;
+		grid-template-columns: 1fr 1fr 1fr;
+		row-gap: 20px;
+		justify-items: flex-start;
+	}
+	.nps-poll__button-warp {
+		flex-direction: column;
+	}
+	.nps-poll__button-text {
+		margin-left: 0;
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.input .input__input {
+		font-size: 13px;
+	}
+	.tel-country {
+		width: 60px;
+	}
+	.tel-country__select-arrow {
+		left: 13px;
+	}
+	.tel-country__img {
+		right: 10px;
+	}
+}
