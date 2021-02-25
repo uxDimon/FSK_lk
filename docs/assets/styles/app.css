@@ -740,7 +740,7 @@ body.dark .button-zoom svg {
   display: block;
   position: relative;
   width: 100%;
-  height: 100%;
+  align-self: stretch;
   -o-object-fit: cover;
      object-fit: cover; }
 
@@ -873,7 +873,7 @@ body.dark .news-block__linc:hover {
   display: block;
   width: 100%;
   min-height: 210px;
-  height: 100%;
+  align-self: stretch;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-left-radius: 4px;
@@ -927,6 +927,7 @@ body.dark .news-block__linc:hover {
     padding: 16px;
     padding-bottom: 50px; }
   .main-slider__img {
+    max-height: 250px;
     order: 1; }
   .main-slider__button {
     width: 100%; }
