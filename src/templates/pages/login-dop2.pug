@@ -1,0 +1,18 @@
+extends ../template
+
+block variables
+    - var title = 'Войти'
+    - var header = true 
+
+block content
+    main
+        .login_dop__wrap
+            form.login_dop_pas
+                .login_dop_pas__text Вам нужно придумать себе новый пароль для последующих входов в личный кабинет.
+                lable.input
+                    input(type="password", name="login-form", placeholder="Новый пароль").input__input
+                    .input__error Поле указано не верно                
+                lable.input
+                    input(type="password", name="login-form", placeholder="Повторите пароль").input__input
+                    .input__error Поле указано не верно                
+                button(type="submit").button Войти
