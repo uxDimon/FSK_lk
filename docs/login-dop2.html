@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Карта</title>
+    <title>Войти</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,22 +25,19 @@
       </div>
     </header>
     <main>
-      <div class="cont-block__wrap"> 
-        <div class="cont-block cont-block_m70">
-          <ul style="display: grid; grid-row-gap: 12px; font-weight: 300; font-size: 18px;">
-            <li> <a href="login.html">Войти </a></li>
-            <li> <a href="login-dop1.html">Главная - авторизация</a></li>
-            <li> <a href="login-dop2.html">Главная - авторизация Новый пароль</a></li>
-            <li> <a href="main-page.html">Главная </a></li>
-            <li> <a href="broni.html">Мои брони и сделки </a></li>
-            <li> <a href="my-data.html">Мои данные </a></li>
-            <li> <a href="moi-pokupki.html">Мои покупки</a></li>
-            <li> <a href="help-doc.html">Помощь и документы</a></li>
-            <li> <a href="zapis-na-priem.html">Запись на прием квартиры</a></li>
-            <li> <a href="kontact-obr.html">Контакты и обращения</a></li>
-            <li> <a href="nps.html">NPS опрос дольщиков со своим URL адресом</a></li>
-          </ul>
-        </div>
+      <div class="login_dop__wrap">
+        <form class="login_dop_pas">
+          <div class="login_dop_pas__text">Вам нужно придумать себе новый пароль для последующих входов в личный кабинет.</div>
+          <lable class="input">
+            <input class="input__input" type="password" name="login-form" placeholder="Новый пароль">
+            <div class="input__error">Поле указано не верно                </div>
+          </lable>
+          <lable class="input">
+            <input class="input__input" type="password" name="login-form" placeholder="Повторите пароль">
+            <div class="input__error">Поле указано не верно                </div>
+          </lable>
+          <button class="button" type="submit">Войти</button>
+        </form>
       </div>
     </main>
     <script src="assets/scripts/imask.min.js"></script>
