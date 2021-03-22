@@ -2149,7 +2149,8 @@ body.dark .progress-slider__thumbs::after {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25); }
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 5px; }
   .login_dop .login {
     position: static;
     box-shadow: none;
@@ -2210,7 +2211,7 @@ body.dark .progress-slider__thumbs::after {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  width: 100%;
+  width: calc(100% - 24px);
   max-width: 330px;
   display: grid;
   grid-row-gap: 24px; }
@@ -2223,3 +2224,24 @@ body.dark .progress-slider__thumbs::after {
   font-size: 16px;
   line-height: 21px;
   color: var(--color-main-text); }
+
+@media screen and (max-width: 850px) {
+  .login_dop__wrap-img {
+    display: none; }
+  .login_dop .login {
+    border-radius: 5px; } }
+
+@media screen and (max-width: 768px) {
+  .login_dop .login-form__bottom-resend {
+    order: 2;
+    margin-bottom: 0;
+    margin-top: 20px; }
+  .login_dop .login-form__bottom-wrap > .button {
+    order: 1; } }
+
+@media screen and (max-width: 580px) {
+  .login_dop {
+    width: calc(100% - 24px); }
+  .login_dop .login {
+    padding: 30px 16px 40px;
+    width: 100%; } }
