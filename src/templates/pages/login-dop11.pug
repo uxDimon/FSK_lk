@@ -1,0 +1,55 @@
+extends ../template
+
+block variables
+    - var title = 'Войти'
+    - var header = true 
+
+block content
+    main
+        .login_dop__wrap
+            .login_dop
+                img(src="./assets/images/login_dop.jpg").login_dop__wrap-img
+                .login
+                    svg(width="223", height="50", data-logo).login__main-logo
+                        use(xlink:href="./assets/images/sprite.svg#main-logo")
+                    
+                    .login-form
+                        lable.input.input_tel-country
+                            .tel-country__wrap
+                                input(type="tel", name="login-form").input__input
+                                .tel-country
+                                    button(data-country="rus").tel-country__select
+                                        svg(width="10", height="5").tel-country__select-arrow
+                                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                                        img(src="./assets/images/flag/flag-rus.svg", alt="Россия").tel-country__img
+                                    .tel-country__optipn-wrap 
+                                        label.tel-country__option
+                                            input(type="radio", name="tel-country", value="rus").tel-country__option-input
+                                            img(src="./assets/images/flag/flag-rus.svg", alt="Россия").tel-country__option-img
+                                        label.tel-country__option
+                                            input(type="radio", name="tel-country", value="aze").tel-country__option-input
+                                            img(src="./assets/images/flag/flag-aze.svg", alt="Азербайджан").tel-country__option-img
+                            .input__error Поле указано не верно
+                        
+                        lable.input
+                            input(type="password", name="login-form").input__input
+                            .input__error Поле указано не верно
+                        //- lable.input.error
+                            .input__name Телефон 
+                            input(type="text", name="login-form", placeholder="Александр").input__input
+                            .input__error Поле указано не верно
+                        
+                        .login-form__bottom-wrap
+                            <div></div>
+                            button(type="submit").button Зарегистрироваться
+                        
+                        .login-form__or 
+                            .login-form__or-text или
+                        
+                        .login-form__bottom-wrap-dop 
+                            button(type="submit").button.button_ghost Войти
+
+            a(href="#").login_dop__linc-back 
+                svg(width="20  ", height="17").login_dop__linc-back-icon
+                    use(xlink:href="./assets/images/sprite.svg#icon-arrow-back")
+                .login_dop__linc-back-text Вернуться на сайт
