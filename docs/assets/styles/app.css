@@ -2186,6 +2186,9 @@ body.dark .progress-slider__thumbs::after {
   color: var(--color-dop);
   margin: 0 25px; }
 
+.login-form__bottom-wrap .button {
+  min-width: 140px; }
+
 .login-form__bottom-wrap-dop {
   display: flex;
   align-items: center;
@@ -2224,6 +2227,23 @@ body.dark .progress-slider__thumbs::after {
   font-size: 16px;
   line-height: 21px;
   color: var(--color-main-text); }
+
+.login_dop__linc-back {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  text-decoration: none; }
+
+.login_dop__linc-back-icon {
+  margin-right: 12px; }
+
+.login_dop__linc-back-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px; }
 
 @media screen and (max-width: 850px) {
   .login_dop__wrap-img {
