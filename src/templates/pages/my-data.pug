@@ -218,3 +218,21 @@ block content
                 
                 .data-button-wrap
                     button(type="submit").button Сохранить изменения
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .data-header 
+                    .data-header__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-key")
+                    h2.data-header__h Доступ в ЛК
+                
+                .data-input-block 
+                    lable.input
+                        .input__name Новый пароль
+                        input(type="password", name="", placeholder="Новый пароль").input__input
+                        .input__error Поле указано не верно
+                    lable.input
+                        .input__name Новый пароль (повторно)
+                        input(type="password", name="", placeholder="Новый пароль (повторно)").input__input
+                        .input__error Поле указано не верно
