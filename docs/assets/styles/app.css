@@ -2245,6 +2245,10 @@ body.dark .progress-slider__thumbs::after {
   font-size: 16px;
   line-height: 19px; }
 
+.login-form__bottom-center {
+  margin-right: auto;
+  margin-left: auto; }
+
 @media screen and (max-width: 850px) {
   .login_dop__wrap-img {
     display: none; }
