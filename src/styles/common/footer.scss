@@ -1,0 +1,121 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+$content-max-weight: 1200px;
+$content-padding: 0 16px;
+
+.pop-up__wrap {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99999;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: 300ms ease-in-out 0ms;
+	transition-property: visibility, opacity;
+
+	&.active {
+		visibility: visible;
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+.pop-up__close-aria {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.35);
+	z-index: 1;
+}
+
+.pop-up {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc(100% - 32px);
+	max-width: 600px;
+	border-radius: 5px;
+	background-color: var(--color-main-back);
+	padding: 45px 70px;
+	z-index: 2;
+}
+
+.pop-up__h {
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 1.2;
+	color: var(--color-main-text);
+	margin: 0 0 14px;
+}
+
+.pop-up__text {
+	color: var(--color-dop);
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.4;
+	margin-bottom: 24px;
+}
+
+.pop-up__form {
+	display: grid;
+	grid-row-gap: 16px;
+}
+
+.pop-up__button {
+	margin-top: 10px;
+	justify-self: start;
+}
+
+.input {
+	textarea.input__input {
+		height: 100px;
+		max-height: 200px;
+		resize: vertical;
+	}
+
+	input[type="file"],
+	.input__input-file {
+		visibility: hidden;
+		position: absolute;
+	}
+}
+
+.pop-up__close {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: transparent;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+
+	svg {
+		width: 40px;
+		height: 40px;
+		display: block;
+		--icon-color: var(--color-main);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.pop-up {
+		padding: 30px 16px;
+	}
+}

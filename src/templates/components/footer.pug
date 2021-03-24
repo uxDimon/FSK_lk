@@ -1,1 +1,29 @@
-footer
+.pop-up__wrap(data-active-block='pop1') 
+    .pop-up
+        button.pop-up__close(data-active-control='pop1')
+            svg(width="14", height="14")
+                use(xlink:href="./assets/images/sprite.svg#icon-cross")
+
+        h3.pop-up__h Заголовок
+        .pop-up__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, porro quos quidem cum dolore debitis nemo enim obcaecati.
+        form.pop-up__form
+            label.input
+                .input__name Тема обращения 
+                input(type="text", name="", placeholder="Тема обращения", value="").input__input
+                .input__error Поле указано не верно                   
+            label.input
+                .input__name Тип обращения
+                select(name="").input__input
+                    option(value="1") Тип обращения 1
+                    option(value="2") Тип обращения 2
+                    option(value="3") Тип обращения 3
+            label.input
+                .input__name Текст обращения
+                textarea(name="", placeholder="Текст обращения", value="").input__input
+            label.input
+                .input__name Загрузка файлов 
+                .input__file-text Загрузка файлов 
+                input(type="file", name="", onchange="uploadFile(this)").input__input-file
+                .input__error Поле указано не верно
+            button(type="submit").button.pop-up__button Отправить
+    .pop-up__close-aria(data-active-control='pop1')

@@ -178,3 +178,22 @@ if (helpFaqList) {
 		});
 	}
 }
+
+// data-active
+const activeBlockList = document.querySelectorAll("[data-active-block]");
+if (activeBlockList) {
+	for (const activeBlock of activeBlockList) {
+		const activeControlList = document.querySelectorAll(`[data-active-control="${activeBlock.dataset.activeBlock}"]`);
+		for (const activeControl of activeControlList) {
+			activeControl.addEventListener("click", () => {
+				for (const activeControlItem of activeControlList) activeControlItem.classList.toggle(activeClass);
+				activeBlock.classList.toggle(activeClass);
+			});
+		}
+	}
+}
+
+// input file
+function uploadFile(target) {
+	target.parentElement.querySelector(".input__file-text").innerHTML = target.files[0].name;
+}

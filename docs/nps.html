@@ -216,6 +216,44 @@
         </div>
       </div>
     </main>
+    <div class="pop-up__wrap" data-active-block="pop1"> 
+      <div class="pop-up">
+        <button class="pop-up__close" data-active-control="pop1">
+          <svg width="14" height="14">
+            <use xlink:href="./assets/images/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <h3 class="pop-up__h">Заголовок</h3>
+        <div class="pop-up__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, porro quos quidem cum dolore debitis nemo enim obcaecati.</div>
+        <form class="pop-up__form">
+          <label class="input">
+            <div class="input__name">Тема обращения </div>
+            <input class="input__input" type="text" name="" placeholder="Тема обращения" value="">
+            <div class="input__error">Поле указано не верно                   </div>
+          </label>
+          <label class="input">
+            <div class="input__name">Тип обращения</div>
+            <select class="input__input" name="">
+              <option value="1">Тип обращения 1</option>
+              <option value="2">Тип обращения 2</option>
+              <option value="3">Тип обращения 3</option>
+            </select>
+          </label>
+          <label class="input">
+            <div class="input__name">Текст обращения</div>
+            <textarea class="input__input" name="" placeholder="Текст обращения" value=""></textarea>
+          </label>
+          <label class="input">
+            <div class="input__name">Загрузка файлов </div>
+            <div class="input__file-text">Загрузка файлов </div>
+            <input class="input__input-file" type="file" name="" onchange="uploadFile(this)">
+            <div class="input__error">Поле указано не верно</div>
+          </label>
+          <button class="button pop-up__button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="pop-up__close-aria" data-active-control="pop1"></div>
+    </div>
     <script src="assets/scripts/imask.min.js"></script>
     <script src="assets/scripts/accordion.min.js"></script>
     <script src="assets/scripts/swiper-bundle.min.js"></script>

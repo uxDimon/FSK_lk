@@ -192,6 +192,7 @@ a.bread-cru__linc:hover {
 		display: none;
 	}
 
+	.input__file-text,
 	.input__input {
 		min-height: 50px;
 		width: 100%;
@@ -724,7 +725,6 @@ body.dark {
 @import "./pages/broni.scss";
 @import "./pages/my-data-help.scss";
 @import "./pages/zapis-contact-nps.scss";
-@import "./common/footer.scss";
 
 // @media screen and (max-width: 1274px) {
 
@@ -794,3 +794,4 @@ body.dark {
 }
 
 @import "./pages/login-dop.scss";
+@import "./common/footer.scss";
