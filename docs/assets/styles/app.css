@@ -1318,7 +1318,8 @@ body.dark .news-block__linc:hover {
   border-radius: 50px;
   border: 1px solid var(--color-main);
   position: relative;
-  margin-right: 20px; }
+  margin-right: 20px;
+  flex-shrink: 0; }
   .data-header__icon svg {
     display: block;
     position: absolute;
@@ -1338,6 +1339,9 @@ body.dark .news-block__linc:hover {
   font-weight: 300;
   font-size: 16px;
   line-height: 21px; }
+
+.data-header__warning {
+  color: var(--color-main); }
 
 .data-input-block {
   display: grid;

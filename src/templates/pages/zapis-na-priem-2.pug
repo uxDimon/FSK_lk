@@ -1,0 +1,78 @@
+extends ../template
+
+block variables
+    - var title = 'Запись на прием квартиры'
+    - var header = true
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Запись на прием квартиры
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Главная
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Личный кабинет
+                    li.bread-cru__item 
+                        .bread-cru__linc Запись на прием квартиры
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .apart-card.cont-block_mb30
+                    img(src="./assets/images/plan.png", width="152", height="152", alt="2-к квартира, (№752) в UP-квартал “Пушкинский”").apart-card__img
+                    .apart-card__body 
+                        h3.apart-card__h 2-к квартира, (№752) в UP-квартал “Пушкинский”
+                        ul.apart-card__options-wrap
+                            li.apart-card__options
+                                .apart-card__name Общая площадь
+                                .apart-card__value 65 м²
+                            li.apart-card__options
+                                .apart-card__name Жилая площадь
+                                .apart-card__value 43 м²
+                            li.apart-card__options
+                                .apart-card__name Кухня
+                                .apart-card__value 12 м²
+                            li.apart-card__options
+                                .apart-card__name Этаж
+                                .apart-card__value 12 / 18
+                            li.apart-card__options
+                                .apart-card__name Отделка
+                                .apart-card__value White Box
+                
+                .data-header.cont-block_mb30
+                    .data-header__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-calendar-31")
+                    .data-header__text Запись на данный объект уже была произведена. <br>Мы ждем вас 
+                        span.data-header__warning 31 марта 2021, в 9:00.
+                
+                .apart-card.cont-block_mb30
+                    img(src="./assets/images/plan.png", width="152", height="152", alt="2-к квартира, (№752) в UP-квартал “Пушкинский”").apart-card__img
+                    .apart-card__body 
+                        h3.apart-card__h 2-к квартира, (№752) в UP-квартал “Пушкинский”
+                        ul.apart-card__options-wrap
+                            li.apart-card__options
+                                .apart-card__name Общая площадь
+                                .apart-card__value 65 м²
+                            li.apart-card__options
+                                .apart-card__name Жилая площадь
+                                .apart-card__value 43 м²
+                            li.apart-card__options
+                                .apart-card__name Кухня
+                                .apart-card__value 12 м²
+                            li.apart-card__options
+                                .apart-card__name Этаж
+                                .apart-card__value 12 / 18
+                            li.apart-card__options
+                                .apart-card__name Отделка
+                                .apart-card__value White Box
+                
+                .data-header.cont-block_mb30
+                    .data-header__icon 
+                        svg(width="50", height="50")
+                            use(xlink:href="./assets/images/sprite.svg#icon-prohibited")
+                    .data-header__text Отдельная запись на кладовые помещения не производится. <br>Осмотр и приемка осуществляются 
+                        span.data-header__warning вместе с квартирой.
+
+

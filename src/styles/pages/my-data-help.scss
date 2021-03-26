@@ -31,6 +31,7 @@ $content-padding: 0 16px;
 	border: 1px solid var(--color-main);
 	position: relative;
 	margin-right: 20px;
+	flex-shrink: 0;
 
 	svg {
 		display: block;
@@ -54,6 +55,10 @@ $content-padding: 0 16px;
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 21px;
+}
+
+.data-header__warning {
+	color: var(--color-main);
 }
 
 .data-input-block {
@@ -122,7 +127,6 @@ $content-padding: 0 16px;
 }
 
 @media screen and (max-width: 1023px) {
-
 }
 
 @media screen and (max-width: 767px) {
@@ -369,7 +373,7 @@ $content-padding: 0 16px;
 		width: 50px;
 		height: 50px;
 		margin-right: 16px;
-		
+
 		svg {
 			width: 30px;
 			height: 30px;

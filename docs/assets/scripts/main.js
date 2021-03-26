@@ -58,11 +58,12 @@ if (telInputList) {
 const buttonActiveList = document.querySelectorAll(".button:not(.button.button_icon)");
 if (buttonActiveList) {
 	for (const buttonActive of buttonActiveList) {
-		buttonActive.addEventListener("mousedown", (event) => {
+		buttonActive.addEventListener("click", (event) => {
 			const button = buttonActive.getBoundingClientRect(),
 				buttonEffect = buttonActive.querySelector(".buttonEffect"),
 				buttonEffectHtml = `<div class="buttonEffect" style="top:${event.clientY - 10 - button.y}px; left:${event.clientX - 10 - button.x}px;"></div>`;
-
+			console.log(button);
+			console.log(event.clientY);
 			if (buttonEffect) buttonEffect.remove();
 			buttonActive.insertAdjacentHTML("afterbegin", buttonEffectHtml);
 		});
