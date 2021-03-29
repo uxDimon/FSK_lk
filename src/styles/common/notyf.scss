@@ -1,0 +1,98 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+$content-max-weight: 1200px;
+$content-padding: 0 16px;
+
+.notyf__wrap {
+	position: fixed;
+	top: 80px;
+	right: 20px;
+	display: grid;
+	grid-row-gap: 20px;
+	width: calc(100% - 16px);
+	max-width: 560px;
+}
+
+.notyf {
+	background-color: var(--color-dop-back);
+	border-radius: 5px;
+	padding: 30px 40px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: 150px;
+	position: relative;
+}
+
+.notyf__close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: none;
+	background: transparent;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+
+	svg {
+		display: block;
+		--icon-color: var(--color-dop);
+		width: 28px;
+		height: 28px;
+	}
+}
+
+.notyf__icon {
+	width: 60px;
+	height: 60px;
+	border-radius: 50px;
+	border: 1px solid var(--color-main);
+	position: relative;
+	margin-right: 32px;
+	flex-shrink: 0;
+
+	svg {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		--icon-color: var(--color-main-text);
+	}
+}
+
+.notyf__text {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 21px;
+}
+
+.notyf__warning {
+	color: var(--color-main);
+}
+
+@media screen and (max-width: 1080px) {
+	.notyf__wrap {
+		right: 16px;
+		grid-row-gap: 16px;
+	}
+
+	.notyf {
+		padding: 16px 36px 16px 26px;
+		min-height: 20px;
+	}
+
+	.notyf__icon {
+		display: none;
+	}
+}

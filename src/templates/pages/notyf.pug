@@ -1,0 +1,158 @@
+extends ../template
+
+block variables
+    - var title = 'Запись на прием квартиры'
+    - var header = true
+
+block content
+    main
+        .cont-block__wrap 
+            .cont-block.cont-block_m30
+                h1.cont-block__h1 Запись на прием квартиры
+                ul.bread-cru 
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Главная
+                    li.bread-cru__item 
+                        a(href="#").bread-cru__linc Личный кабинет
+                    li.bread-cru__item 
+                        .bread-cru__linc Запись на прием квартиры
+
+        .cont-block__wrap 
+            .cont-block.cont-block_mb70
+                .apart-card.cont-block_mb30
+                    img(src="./assets/images/plan.png", width="152", height="152", alt="2-к квартира, (№752) в UP-квартал “Пушкинский”").apart-card__img
+                    .apart-card__body 
+                        h3.apart-card__h 2-к квартира, (№752) в UP-квартал “Пушкинский”
+                        ul.apart-card__options-wrap
+                            li.apart-card__options
+                                .apart-card__name Общая площадь
+                                .apart-card__value 65 м²
+                            li.apart-card__options
+                                .apart-card__name Жилая площадь
+                                .apart-card__value 43 м²
+                            li.apart-card__options
+                                .apart-card__name Кухня
+                                .apart-card__value 12 м²
+                            li.apart-card__options
+                                .apart-card__name Этаж
+                                .apart-card__value 12 / 18
+                            li.apart-card__options
+                                .apart-card__name Отделка
+                                .apart-card__value White Box
+                
+                .head-input-wrap.cont-block_mb30
+                    h2.cont-block__h Данные покупателя (представителя)
+                    
+                    .data-checkbox-block 
+                        .input-radio-wrap
+                            .input-radio-wrap__trxt На приемке будут все собственники?
+                            .input-radio-wrap__input
+                                label.input-check
+                                    input(type="radio", name="radio1", checked).input-check__input
+                                    .input-check__mimic
+                                        svg(width="40", height="40")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                    .input-check__text Да
+                                label.input-check
+                                    input(type="radio", name="radio1").input-check__input
+                                    .input-check__mimic
+                                        svg(width="40", height="40")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                    .input-check__text Нет
+                        .input-radio-wrap
+                            .input-radio-wrap__trxt Нотариальная доверенность от собственника(ов)?
+                            .input-radio-wrap__input
+                                label.input-check
+                                    input(type="radio", name="radio2").input-check__input
+                                    .input-check__mimic
+                                        svg(width="40", height="40")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                    .input-check__text Да
+                                label.input-check
+                                    input(type="radio", name="radio2", checked).input-check__input
+                                    .input-check__mimic
+                                        svg(width="40", height="40")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-ок")
+                                    .input-check__text Нет
+                    
+                    .warning-blck 
+                        svg(width="29", height="27").warning-blck__icon
+                            use(xlink:href="./assets/images/sprite.svg#icon-warning")
+                        .warning-blck__text Если на приемке будут присутствовать не все собственники, то представитель собственника должен предоставить нотариальную доверенность от каждого собственника. В случае, если у представителя отсутствует хоть одна доверенность - приемка не возможна.                        
+
+                .head-input-wrap
+                    .data-header 
+                        .data-header__text Запись на приемку производится группами до 10 человек и продолжается от одного до двух часов. Для записи вам необходимо выбрать доступное удобное время и дату, заполнить остальные поля и нажать “Записаться”.
+
+                    .data-input-block
+                        lable.input
+                            .input__name Фамилия 
+                            input(type="text", name="", placeholder="Фамилия", value="Иванов").input__input
+                            .input__error Поле указано не верно                   
+                        lable.input
+                            .input__name Имя 
+                            input(type="text", name="", placeholder="Имя", value="Александр").input__input
+                            .input__error Поле указано не верно                   
+                        lable.input
+                            .input__name Отчество 
+                            input(type="text", name="", placeholder="Отчество", value="Иванович").input__input
+                            .input__error Поле указано не верно        
+
+                        lable.input.input_tel-country
+                            .input__name Контактный телефон
+                            .tel-country__wrap
+                                input(type="tel", name="login-form").input__input
+                                .tel-country
+                                    button(data-country="rus").tel-country__select
+                                        svg(width="10", height="5").tel-country__select-arrow
+                                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                                        img(src="./assets/images/flag/flag-rus.svg", alt="Россия").tel-country__img
+                                    .tel-country__optipn-wrap 
+                                        label.tel-country__option
+                                            input(type="radio", name="tel-country", value="rus").tel-country__option-input
+                                            img(src="./assets/images/flag/flag-rus.svg", alt="Россия").tel-country__option-img
+                                        label.tel-country__option
+                                            input(type="radio", name="tel-country", value="aze").tel-country__option-input
+                                            img(src="./assets/images/flag/flag-aze.svg", alt="Азербайджан").tel-country__option-img
+                            .input__error Поле указано не верно
+                        lable.input
+                            .input__name Дата
+                            input(type="date", name="", placeholder="Дата рождения").input__input
+                            .input__error Поле указано не верно                   
+                        lable.input
+                            .input__name Временной интервал 
+                            select(name="").input__input
+                                option(value="1") 10:00 - 10:30
+                                option(value="2") 10:30 - 11:30
+                                option(value="3") 11:30 - 12:30
+                    
+                    .button-text-wrap
+                        .button-text-wrap__text Текст дисклеймера о защите правовой информации. Текст дисклеймера о защите правовой информации. Текст дисклеймера о защите правовой информации. Текст дисклеймера о защите правовой информации. Текст дисклеймера о защите правовой информации..
+                        button(type="submit").button Записаться
+
+
+    // Можешь вставлять куда угодно
+    .notyf__wrap 
+        .notyf
+            button.notyf__close
+                svg(width="14", height="14")
+                    use(xlink:href="./assets/images/sprite.svg#icon-cross")
+            
+            .notyf__icon
+                svg(width="50", height="50")
+                    use(xlink:href="./assets/images/sprite.svg#icon-prohibited")
+            
+            .notyf__text Запись на данный объект уже была произведена. Мы ждем вас 
+                span.notyf__warning 31 марта 2021, в 9:00. 
+        
+        .notyf
+            button.notyf__close
+                svg(width="14", height="14")
+                    use(xlink:href="./assets/images/sprite.svg#icon-cross")
+            
+            .notyf__icon
+                svg(width="50", height="50")
+                    use(xlink:href="./assets/images/sprite.svg#icon-calendar-31")
+            
+            .notyf__text Запись на данный объект в выбранное время недоступно :(
+
