@@ -1,10 +1,3 @@
-const switchDark = document.querySelector("#switch-dark");
-if (switchDark) {
-	switchDark.addEventListener("change", () => {
-		document.body.classList.toggle("dark");
-	});
-}
-
 const activeClass = "active";
 
 // https://imask.js.org/guide.html
@@ -197,4 +190,15 @@ if (activeBlockList) {
 // input file
 function uploadFile(target) {
 	target.parentElement.querySelector(".input__file-text").innerHTML = target.files[0].name;
+}
+
+const switchDark = document.querySelector("#switch-dark");
+if (switchDark) {
+	switchDark.addEventListener("change", () => {
+		document.body.classList.toggle("dark");
+	});
+	if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+		switchDark.setAttribute("checked", "checked");
+		document.body.classList.toggle("dark");
+	}
 }

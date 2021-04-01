@@ -65,6 +65,25 @@ body.dark {
 	}
 }
 
+// @media (prefers-color-scheme: dark) {
+// 	body {
+// 		// --color-main: #E94200;
+// 		// --color-dop: #727272;
+// 		--color-main-back: #202021;
+// 		--color-dop-back: #2d2b2e;
+// 		--color-border: #727272;
+// 		--color-main-text: #ffffff;
+// 		--color-dop-text: #727272;
+// 		// --color-cta: #80B918;
+// 		// --color-error: #EB001B;
+// 		// --color-alert: #FFDD2D;
+
+// 		svg[data-logo] {
+// 			--icon-color-text: var(--color-main-text);
+// 		}
+// 	}
+// }
+
 body {
 	margin: 0;
 	padding: 0;
