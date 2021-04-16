@@ -1,0 +1,129 @@
+@mixin udoli {
+	--color-main: #e94200;
+	--color-dop: #727272;
+	--color-main-back: #ffffff;
+	--color-dop-back: #f6f8fa;
+	--color-border: #e5e5e5;
+	--color-main-text: #000000;
+	--color-dop-text: #bebebe;
+	--color-cta: #80b918;
+	--color-error: #eb001b;
+	--color-alert: #ffdd2d;
+}
+$content-max-weight: 1200px;
+$content-padding: 0 16px;
+
+// notice
+.header-icon-wrap {
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 15px;
+	align-items: center;
+}
+
+.notice {
+	position: relative;
+}
+
+.notice__button {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+
+	&.message {
+		> .notice__button-icon {
+			--icon-color: var(--color-main);
+		}
+	}
+}
+.notice__button-icon {
+	--icon-color: var(--color-dop);
+}
+
+.notice-list__wrap {
+	position: absolute;
+	top: calc(100% + 26px);
+	right: -16px;
+	width: 470px;
+	padding: 20px 30px;
+	border-radius: 5px;
+	background-color: var(--color-dop-back);
+	z-index: 200;
+
+	transition: 250ms ease-in-out 0ms;
+	transition-property: visibility, opacity, transform;
+	transform: translateY(-40px);
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		top: -7px;
+		right: 25px;
+		transform: rotate(45deg);
+		background-color: inherit;
+	}
+
+	&.active {
+		transform: translateY(0);
+		visibility: visible;
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+
+.notice-list {
+	display: grid;
+	grid-row-gap: 30px;
+	max-height: 420px;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		width: 4px;
+		height: 4px;
+	}
+	&::-webkit-scrollbar-thumb {
+		padding: 10px 0;
+		border-radius: 4px;
+		background-color: var(--color-dop-text);
+	}
+}
+
+.notice-list__item {
+	padding-left: 20px;
+	padding-right: 4px;
+	position: relative;
+
+	&.active::before {
+		content: "";
+		display: block;
+		width: 5px;
+		height: 5px;
+		border-radius: 5px;
+		position: absolute;
+		top: 13px;
+		left: 0;
+		background-color: var(--color-main);
+	}
+}
+
+.notice-list__head {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 30px;
+	color: var(--color-main-text);
+}
+
+.notice-list__date {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	color: var(--color-dop);
+}
