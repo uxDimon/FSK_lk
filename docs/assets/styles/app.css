@@ -2577,6 +2577,12 @@ body.dark .progress-slider__thumbs::after {
   margin: 0 0 18px;
   color: var(--color-main-text); }
 
+.news-list__buttom-wrap {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .news-list__text > p {
   font-weight: 300;
   font-size: 14px;
