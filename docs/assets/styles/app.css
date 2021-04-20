@@ -112,6 +112,15 @@ a {
   color: var(--color-main-text);
   margin: 0 0 24px; }
 
+.cont-block__text {
+  margin-bottom: 24px; }
+  .cont-block__text > p {
+    margin: 16px 0; }
+    .cont-block__text > p:first-child {
+      margin-top: 0; }
+    .cont-block__text > p:last-child {
+      margin-bottom: 0; }
+
 .medium-zoom-overlay {
   z-index: 1000; }
 
@@ -591,6 +600,9 @@ body.dark .button-zoom svg {
 
 .small-icon_clip {
   border-radius: 0; }
+
+.text_orange {
+  color: var(--color-main); }
 
 .udoli {
   background-color: aqua; }

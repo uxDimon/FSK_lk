@@ -151,6 +151,22 @@ a {
 	margin: 0 0 24px;
 }
 
+.cont-block__text {
+	margin-bottom: 24px;
+
+	> p {
+		margin: 16px 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
 // medium-zoom
 .medium-zoom-overlay {
 	z-index: 1000;
@@ -731,6 +747,10 @@ body.dark {
 
 .small-icon_clip {
 	border-radius: 0;
+}
+
+.text_orange {
+	color: var(--color-main);
 }
 
 // .udoli ↓
