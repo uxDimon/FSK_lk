@@ -195,10 +195,17 @@ function uploadFile(target) {
 const switchDark = document.querySelector("#switch-dark");
 if (switchDark) {
 	switchDark.addEventListener("change", () => {
-		document.body.classList.toggle("dark");
+		const theme = document.body.classList.toggle("dark") ? "dark" : "white";
+		localStorage.setItem("switch-dark", theme);
 	});
-	if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+	if (!localStorage.getItem("switch-dark") && window.matchMedia("(prefers-color-scheme: dark)").matches) {
 		switchDark.setAttribute("checked", "checked");
-		document.body.classList.toggle("dark");
+		document.body.classList.add("dark");
+	} else if (localStorage.getItem("switch-dark") === "dark") {
+		switchDark.setAttribute("checked", "checked");
+		document.body.classList.add("dark");
+	} else if (localStorage.getItem("switch-dark") === "white") {
+		switchDark.removeAttribute("checked");
+		document.body.classList.remove("dark");
 	}
 }
